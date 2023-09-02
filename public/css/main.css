@@ -1,0 +1,23 @@
+body {
+    background: #fafbfd;
+}
+.header-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 150px;
+    background: linear-gradient(to right, #18357b, #2e98f3);
+    width: 100%;
+}
+.header-content h1 {
+    color: white;
+    text-align: center;
+}
+
+.bg-white{
+    background-color: white;
+    box-shadow: 1px 1px 2px rgb(64, 64, 64);
+    padding: 15px 0px 35px 0px;
+    margin-top: -20px;
+    border-radius: 5px;
+}
