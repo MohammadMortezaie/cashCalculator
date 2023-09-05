@@ -1,11 +1,19 @@
 @extends('main')
 
-@section('content')
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Calculate your mortgage, manage your personal budget, and track your income, expenses, and savings goals with our comprehensive Mortgage Calculator and Budget Planner tool. It's free and easy to use. Take control of your finances and achieve your financial goals with ease.">
-    <title>Mortgage Calculator & Budget Planner - Financial Tool</title>
+@section('head')
+    <?php
+    $seotools = app('seotools');
+    $metatags = app('seotools.metatags');
+    $twitter = app('seotools.twitter');
+    $opengraph = app('seotools.opengraph');
+    $jsonld = app('seotools.json-ld');
+    $jsonldMulti = app('seotools.json-ld-multi');
 
+    echo app('seotools')->generate();
+    ?>
+@endsection
+
+@section('content')
     <div id="app">
         <div class="header-content">
             <h1>{{ __('BudgetPlanner.h1') }}</h1>
@@ -17,97 +25,88 @@
                     <p>{{ __('BudgetPlanner.top-p-1') }}</p>
 
                     <p>{{ __('BudgetPlanner.top-p-2') }}</p>
-                </section>
-
-                <section class="col-md-12">
                     <hr>
-                    <div class="col-md-4">
-                        <label for="Income">{{__('BudgetPlanner.TIncome')}} <span>@{{ formatNumber(income) }}</span></label>
+                </section>
 
-                        <div v-for="(field, index) in incomeFields" :key="index" class="input-group"
-                            style="margin-bottom: 5px">
+                <section class="col-md-12 row">
+                    <div class="col-md-4">
+                        <label class="h5" for="Income">{{ __('BudgetPlanner.TIncome') }}
+                            <span>@{{ formatNumber(income) }}</span></label>
+
+                        <div v-for="(field, index) in incomeFields" :key="index" class="input-group mb-2">
                             <input :id="'Income' + index" class="form-control" :name="'incomeFields[' + index + ']'"
-                                type="number" v-model="field.value" placeholder="{{__('BudgetPlanner.income')}}" @input="calculateTotalIncome" />
-                            <span class="input-group-btn" v-if="index == 0">
-                                <button @click.prevent="addFieldIncome(index)" class="btn btn-success btn-add"
-                                    type="button">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </button>
-                            </span>
-                            <span class="input-group-btn" v-if="index != 0">
-                                <button @click.prevent="removeFieldIncome(index)" class="btn btn-danger btn-remove"
-                                    type="button">
-                                    <span class="glyphicon glyphicon-minus"></span>
-                                </button>
-                            </span>
+                                type="number" v-model="field.value" placeholder="{{ __('BudgetPlanner.income') }}"
+                                @input="calculateTotalIncome" />
+                            <div class="input-group-append" v-if="index == 0">
+                                <button class="btn btn-success btn-add" type="button"
+                                    @click.prevent="addFieldIncome(index)"> + </button>
+                            </div>
+                            <div class="input-group-append" v-if="index != 0">
+                                <button class="btn btn-danger btn-remove" type="button"
+                                    @click.prevent="removeFieldIncome(index)"> - </button>
+                            </div>
                         </div>
-
-
 
                     </div>
 
                     <div class="col-md-4">
-                        <label for="Expenses">{{__('BudgetPlanner.TExpenses')}}<span>@{{ formatNumber(expenses) }}</span></label>
+                        <label class="h5" for="Expenses">{{ __('BudgetPlanner.TExpenses') }}
+                            <span>@{{ formatNumber(expenses) }}</span></label>
 
-                        <div v-for="(field, index) in expensesFields" :key="index" class="input-group"
-                            style="margin-bottom: 5px">
+                        <div v-for="(field, index) in expensesFields" :key="index" class="input-group mb-2">
                             <input :id="'Expenses' + index" class="form-control" :name="'expensesFields[' + index + ']'"
-                                type="number" v-model="field.value" placeholder="{{__('BudgetPlanner.Expenses')}} "
+                                type="number" v-model="field.value" placeholder="{{ __('BudgetPlanner.Expenses') }} "
                                 @input="calculateTotalExpenses" />
-                            <span class="input-group-btn" v-if="index == 0">
-                                <button @click.prevent="addFieldExpenses(index)" class="btn btn-success btn-add"
-                                    type="button">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </button>
-                            </span>
-                            <span class="input-group-btn" v-if="index != 0">
-                                <button @click.prevent="removeFieldExpenses(index)" class="btn btn-danger btn-remove"
-                                    type="button">
-                                    <span class="glyphicon glyphicon-minus"></span>
-                                </button>
-                            </span>
+
+                            <div class="input-group-append" v-if="index == 0">
+                                <button class="btn btn-success btn-add" type="button"
+                                    @click.prevent="addFieldExpenses(index)"> + </button>
+                            </div>
+                            <div class="input-group-append" v-if="index != 0">
+                                <button class="btn btn-danger btn-remove" type="button"
+                                    @click.prevent="removeFieldExpenses(index)"> - </button>
+                            </div>
+
                         </div>
 
                     </div>
 
                     <div class="col-md-4">
-                        <label for="savings">{{__('BudgetPlanner.TSavings')}} <span>@{{ formatNumber(savings) }}</span></label>
+                        <label class="h5" for="savings">{{ __('BudgetPlanner.TSavings') }}
+                            <span>@{{ formatNumber(savings) }}</span></label>
 
-                        <div v-for="(field, index) in savingsFields" :key="index" class="input-group"
-                            style="margin-bottom: 5px">
+                        <div v-for="(field, index) in savingsFields" :key="index" class="input-group mb-2">
                             <input :id="'Savings' + index" class="form-control" :name="'savingsFields[' + index + ']'"
-                                type="number" v-model="field.value" placeholder="{{__('BudgetPlanner.Savings')}}"
+                                type="number" v-model="field.value" placeholder="{{ __('BudgetPlanner.Savings') }}"
                                 @input="calculateTotalSavings" />
-                            <span class="input-group-btn" v-if="index == 0">
-                                <button @click.prevent="addFieldSavings(index)" class="btn btn-success btn-add"
-                                    type="button">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </button>
-                            </span>
-                            <span class="input-group-btn" v-if="index != 0">
-                                <button @click.prevent="removeFieldSavings(index)" class="btn btn-danger btn-remove"
-                                    type="button">
-                                    <span class="glyphicon glyphicon-minus"></span>
-                                </button>
-                            </span>
+
+                            <div class="input-group-append" v-if="index == 0">
+                                <button class="btn btn-success btn-add" type="button"
+                                    @click.prevent="addFieldSavings(index)"> + </button>
+                            </div>
+                            <div class="input-group-append" v-if="index != 0">
+                                <button class="btn btn-danger btn-remove" type="button"
+                                    @click.prevent="removeFieldSavings(index)"> - </button>
+                            </div>
+
                         </div>
 
 
                     </div>
                 </section>
 
-                <section class="col-md-12" style="margin-top: 20px">
-                    <img style="width: 100%"
+                <section class="col-md-12 mt-3">
+                    <img class="w-100"
                         src="https://www.gourmetads.com/wp-content/uploads/2019/02/970x250-starbucks-nitro.jpg">
                 </section>
 
-                <section class="col-md-4" style="margin-top: 40px">
-                    <h2 class="h3">{{__('BudgetPlanner.BudgetProgress')}} </h2>
+                <section class="col-md-4 mt-3">
+                    <h2 class="h4">{{ __('BudgetPlanner.BudgetProgress') }} </h2>
 
-                    <p>{{__('BudgetPlanner.TIncome')}} $ @{{ formatNumber(income) }}</p>
-                    <p>{{__('BudgetPlanner.TExpenses')}} $ @{{ formatNumber(expenses) }}</p>
-                    <p>{{__('BudgetPlanner.TSavingsGoal')}}  $ @{{ formatNumber(savings) }}</p>
-                    <h4>{{__('BudgetPlanner.Remaining')}} $ @{{ formatNumber(remainingBudget) }}</h4>
+                    <p>{{ __('BudgetPlanner.TIncome') }} $ @{{ formatNumber(income) }}</p>
+                    <p>{{ __('BudgetPlanner.TExpenses') }} $ @{{ formatNumber(expenses) }}</p>
+                    <p>{{ __('BudgetPlanner.TSavingsGoal') }} $ @{{ formatNumber(savings) }}</p>
+                    <h5>{{ __('BudgetPlanner.Remaining') }} $ @{{ formatNumber(remainingBudget) }}</h5>
 
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" :aria-valuenow="budgetProgress" aria-valuemin="0"
@@ -116,25 +115,19 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-success">{{__('BudgetPlanner.DownloadPDF')}}</button>
+                    <button class="btn btn-success mt-2">{{ __('BudgetPlanner.DownloadPDF') }}</button>
                 </section>
 
-                <section class="col-md-4" style="margin-top: 40px">
-                    <h2 class="h3">{{__('BudgetPlanner.AFinancialTool')}}</h2>
-                    <p>{{__('BudgetPlanner.AFT-p-1')}}</p>
-                    <p>{{__('BudgetPlanner.AFT-p-2')}}</p>
+                <section class="col-md-4 mt-3">
+                    <h2 class="h4">{{ __('BudgetPlanner.AFinancialTool') }}</h2>
+                    <p>{{ __('BudgetPlanner.AFT-p-1') }}</p>
+                    <p>{{ __('BudgetPlanner.AFT-p-2') }}</p>
                 </section>
 
-                <section class="col-md-4" style="margin-top: 40px">
-                    <h2 class="h3">{{__('BudgetPlanner.MYBP')}}</h2>
-                    <p>{{__('BudgetPlanner.MYBP-p1')}}</p>
-                    <p>{{__('BudgetPlanner.MYBP-p2')}} </p>
-
-                    <p>{{__('BudgetPlanner.TIncome')}} $ @{{ formatNumber(income) }}</p>
-                    <p>{{__('BudgetPlanner.TExpenses')}} $ @{{ formatNumber(expenses) }}</p>
-                    <p>{{__('BudgetPlanner.TSavingsGoal')}}  $ @{{ formatNumber(savings) }}</p>
-                    <p>{{__('BudgetPlanner.Remaining')}} $ @{{ formatNumber(remainingBudget) }}</p>
-
+                <section class="col-md-4 mt-3">
+                    <h2 class="h4">{{ __('BudgetPlanner.MYBP') }}</h2>
+                    <p>{{ __('BudgetPlanner.MYBP-p1') }}</p>
+                    <p>{{ __('BudgetPlanner.MYBP-p2') }} </p>
                 </section>
             </div>
         </div>

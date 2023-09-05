@@ -14,7 +14,14 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version().' -  - mohammad';
+    return redirect('/en');
 });
 
-$router->get('user/{id}', 'ExampleController@show');
+$router->group(['prefix' => '{locale}'], function () use ($router) {
+
+    $router->get('/', function () use ($router) {
+        return $router->app->version() . ' -  - mohammad';
+    });
+
+    $router->get('/budgetPlanner', 'HomeController@budgetPlanner');
+});

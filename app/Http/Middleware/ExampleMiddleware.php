@@ -15,6 +15,13 @@ class ExampleMiddleware
      */
     public function handle($request, Closure $next)
     {
+        if ($request->segment(1)) {
+            $lang = $request->segment(1);
+        } else {
+            $lang = 'en';
+        }
+        app()->setLocale($lang);
+
         return $next($request);
     }
 }

@@ -23,6 +23,7 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
+
 $app->withFacades();
 
 // $app->withEloquent();
@@ -72,9 +73,9 @@ $app->configure('app');
 |
 */
 
-// $app->middleware([
-//     App\Http\Middleware\ExampleMiddleware::class
-// ]);
+$app->middleware([
+    App\Http\Middleware\ExampleMiddleware::class
+]);
 
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
@@ -90,6 +91,9 @@ $app->configure('app');
 | totally optional, so you are not required to uncomment this line.
 |
 */
+
+$app->register(Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class);
+$app->register(\Barryvdh\DomPDF\ServiceProvider::class);
 
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
@@ -111,5 +115,6 @@ $app->router->group([
 ], function ($router) {
     require __DIR__.'/../routes/web.php';
 });
+app('translator')->setLocale('en');
 
 return $app;
