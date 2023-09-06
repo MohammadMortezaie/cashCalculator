@@ -1,0 +1,27 @@
+<?php
+// Spanish (Spain) Language File
+return [
+    'seoTitle' => 'Planificador de Presupuesto Gratuito',
+    'seoDescription' => 'Gestione su presupuesto personal y haga un seguimiento de sus ingresos, gastos y metas de ahorro con nuestra completa herramienta de Planificación de Presupuesto. Es gratis y fácil de usar. Tome el control de sus finanzas y logre sus objetivos financieros con facilidad.',
+    'IET' => 'Seguimiento de Ingresos y Gastos',
+    'h1' => 'Planificador de Presupuesto Gratuito',
+    'top-h2' => 'Seguimiento de Ingresos y Gastos',
+    'top-p-1' => 'Gestione eficientemente sus finanzas haciendo un seguimiento de sus ingresos totales, gastos y metas de ahorro. Nuestra herramienta gratuita y fácil de usar le ayuda a mantenerse organizado y tomar decisiones financieras informadas.',
+    'top-p-2' => 'Ingrese sus ingresos y gastos y observe su progreso financiero en tiempo real. Tome el control de su futuro financiero con nuestro Planificador de Presupuesto. Administre su presupuesto personal y haga un seguimiento de sus ingresos, gastos y metas de ahorro con nuestra completa herramienta de Planificación de Presupuesto. Es gratis y fácil de usar. Tome el control de sus finanzas y logre sus objetivos financieros con facilidad.',
+    'TIncome' => 'Ingresos Totales:',
+    'income' => 'Ingresos',
+    'TExpenses' => 'Gastos Totales:',
+    'Expenses' => 'Gastos',
+    'TSavings' => 'Ahorros Totales:',
+    'TSavingsGoal' => 'Metas de Ahorro Totales:',
+    'Savings' => 'Ahorros',
+    'Remaining' => 'Presupuesto Restante:',
+    'AFinancialTool' => 'Acerca de Nuestra Herramienta Financiera',
+    'AFT-p-1' => 'Nuestra herramienta de Planificación de Presupuesto le permite tomar el control de su vida financiera. Ya sea que sea un comprador de vivienda por primera vez o esté buscando ahorrar para sus vacaciones soñadas, nuestra herramienta gratuita está diseñada para simplificar el proceso.',
+    'AFT-p-2' => 'Establezca metas de ahorro y planifique su presupuesto de manera efectiva. Con nuestra solución financiera gratuita y completa, puede alcanzar sus objetivos financieros con confianza.',
+    'DownloadPDF' => 'Descargar Resultado en PDF',
+    'BudgetProgress' => 'Progreso del Presupuesto',
+    'MYBP' => 'Supervise el Progreso de su Presupuesto',
+    'MYBP-p1' => 'Manténgase al tanto de su salud financiera en tiempo real con el seguimiento del presupuesto. Vea sus ingresos totales, gastos, metas de ahorro y presupuesto restante de un vistazo.',
+    'MYBP-p2' => 'Nuestra barra de progreso del presupuesto ilustra visualmente su situación financiera, lo que le ayuda a tomar decisiones informadas y alcanzar sus hitos financieros.',
+];

@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class ExampleMiddleware
+class LanguageMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,9 @@ class ExampleMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->segment(1)) {
+        // Spanish, French, Italian, and German
+        // Portuguese, Chinese, Korean, Russian
+        if ($request->segment(1) && in_array($request->segment(1), array('en', 'fr', 'es', 'it', 'de', 'pt-br', 'zh-cn', 'ko', 'ru'))) {
             $lang = $request->segment(1);
         } else {
             $lang = 'en';

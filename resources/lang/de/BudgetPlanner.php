@@ -1,0 +1,27 @@
+<?php
+// German (Germany) Language File
+return [
+    'seoTitle' => 'Kostenloser Budgetplaner',
+    'seoDescription' => 'Verwalten Sie Ihr persönliches Budget und verfolgen Sie Ihre Einnahmen, Ausgaben und Sparziele mit unserem umfassenden Budgetplanungstool. Es ist kostenlos und einfach zu bedienen. Übernehmen Sie die Kontrolle über Ihre Finanzen und erreichen Sie Ihre finanziellen Ziele mühelos.',
+    'IET' => 'Einkommens- und Ausgabeverfolgung',
+    'h1' => 'Kostenloser Budgetplaner',
+    'top-h2' => 'Einkommens- und Ausgabeverfolgung',
+    'top-p-1' => 'Verwalten Sie Ihre Finanzen effizient, indem Sie Ihre Gesamteinkünfte, Ausgaben und Sparziele im Auge behalten. Unser benutzerfreundliches, kostenloses Tool hilft Ihnen, organisiert zu bleiben und fundierte finanzielle Entscheidungen zu treffen.',
+    'top-p-2' => 'Geben Sie Ihre Einnahmen und Ausgaben ein und verfolgen Sie Ihren finanziellen Fortschritt in Echtzeit. Übernehmen Sie die Kontrolle über Ihre finanzielle Zukunft mit unserem Budgetplaner. Verwalten Sie Ihr persönliches Budget und verfolgen Sie Ihre Einnahmen, Ausgaben und Sparziele mit unserem umfassenden Budgetplanungstool. Es ist kostenlos und einfach zu bedienen. Übernehmen Sie die Kontrolle über Ihre Finanzen und erreichen Sie Ihre finanziellen Ziele mühelos.',
+    'TIncome' => 'Gesamteinkommen:',
+    'income' => 'Einkommen',
+    'TExpenses' => 'Gesamtausgaben:',
+    'Expenses' => 'Ausgaben',
+    'TSavings' => 'Gesamtersparnisse:',
+    'TSavingsGoal' => 'Gesamte Sparziele:',
+    'Savings' => 'Ersparnisse',
+    'Remaining' => 'Verbleibendes Budget:',
+    'AFinancialTool' => 'Über Unser Finanztool',
+    'AFT-p-1' => 'Unser Budgetplanungstool ermöglicht es Ihnen, die Kontrolle über Ihr finanzielles Leben zu übernehmen. Egal, ob Sie zum ersten Mal ein Eigenheim kaufen oder für Ihren Traumurlaub sparen möchten, unser kostenloses Tool ist darauf ausgelegt, den Prozess zu vereinfachen.',
+    'AFT-p-2' => 'Setzen Sie Sparziele und planen Sie Ihr Budget effektiv. Mit unserer umfassenden, kostenlosen Finanzlösung können Sie Ihre finanziellen Ziele mit Vertrauen erreichen.',
+    'DownloadPDF' => 'PDF-Ergebnis herunterladen',
+    'BudgetProgress' => 'Budgetfortschritt',
+    'MYBP' => 'Überwachen Sie Ihren Budgetfortschritt',
+    'MYBP-p1' => 'Bleiben Sie über Ihre finanzielle Gesundheit im Echtzeit-Budgettracking auf dem Laufenden. Sehen Sie sich Ihre Gesamteinkünfte, Ausgaben, Sparziele und Ihr verbleibendes Budget auf einen Blick an.',
+    'MYBP-p2' => 'Unsere Budget-Fortschrittsleiste veranschaulicht Ihre finanzielle Situation und unterstützt Sie dabei, fundierte Entscheidungen zu treffen und Ihre finanziellen Meilensteine zu erreichen.',
+];

@@ -1,0 +1,27 @@
+<?php
+// Italian (Italy) Language File
+return [
+    'seoTitle' => 'Pianificatore di Budget Gratuito',
+    'seoDescription' => 'Gestisci il tuo budget personale e monitora i tuoi redditi, le spese e gli obiettivi di risparmio con il nostro completo strumento di Pianificazione del Budget. È gratuito e facile da usare. Prendi il controllo delle tue finanze e raggiungi i tuoi obiettivi finanziari con facilità.',
+    'IET' => 'Monitoraggio dei Redditi e delle Spese',
+    'h1' => 'Pianificatore di Budget Gratuito',
+    'top-h2' => 'Monitoraggio dei Redditi e delle Spese',
+    'top-p-1' => 'Gestisci efficientemente le tue finanze tenendo traccia dei tuoi redditi totali, delle spese e degli obiettivi di risparmio. Il nostro strumento gratuito e facile da usare ti aiuta a rimanere organizzato e a prendere decisioni finanziarie informate.',
+    'top-p-2' => 'Inserisci i tuoi redditi e le tue spese e osserva il tuo progresso finanziario in tempo reale. Prendi il controllo del tuo futuro finanziario con il nostro Pianificatore di Budget. Gestisci il tuo budget personale e monitora i tuoi redditi, le spese e gli obiettivi di risparmio con il nostro completo strumento di Pianificazione del Budget. È gratuito e facile da usare. Prendi il controllo delle tue finanze e raggiungi i tuoi obiettivi finanziari con facilità.',
+    'TIncome' => 'Reddito Totale:',
+    'income' => 'Reddito',
+    'TExpenses' => 'Spese Totali:',
+    'Expenses' => 'Spese',
+    'TSavings' => 'Risparmi Totali:',
+    'TSavingsGoal' => 'Obiettivi di Risparmio Totali:',
+    'Savings' => 'Risparmi',
+    'Remaining' => 'Budget Residuo:',
+    'AFinancialTool' => 'Informazioni sul Nostro Strumento Finanziario',
+    'AFT-p-1' => 'Il nostro strumento di Pianificazione di Budget ti permette di prendere il controllo della tua vita finanziaria. Che tu sia un acquirente di casa per la prima volta o stia cercando di risparmiare per le tue vacanze da sogno, il nostro strumento gratuito è progettato per semplificare il processo.',
+    'AFT-p-2' => 'Imposta obiettivi di risparmio e pianifica il tuo budget in modo efficace. Con la nostra soluzione finanziaria completa e gratuita, puoi raggiungere i tuoi obiettivi finanziari con fiducia.',
+    'DownloadPDF' => 'Scarica il Risultato in PDF',
+    'BudgetProgress' => 'Progresso del Budget',
+    'MYBP' => 'Monitora il Progresso del Tuo Budget',
+    'MYBP-p1' => "Rimani aggiornato sulla tua salute finanziaria con il monitoraggio del budget in tempo reale. Visualizza i tuoi redditi totali, le spese, gli obiettivi di risparmio e il budget residuo in un colpo d'occhio.",
+    'MYBP-p2' => "La nostra barra di progresso del budget illustra visualmente la tua situazione finanziaria, aiutandoti a prendere decisioni informate e a raggiungere le tue tappe finanziarie.",
+];

@@ -1,0 +1,27 @@
+<?php
+// Portuguese (Brazil) Language File
+return [
+    'seoTitle' => 'Planejador de Orçamento Gratuito',
+    'seoDescription' => 'Gerencie seu orçamento pessoal e acompanhe sua renda, despesas e metas de economia com nossa ferramenta abrangente de Planejamento de Orçamento. É grátis e fácil de usar. Assuma o controle de suas finanças e alcance seus objetivos financeiros com facilidade.',
+    'IET' => 'Acompanhamento de Receitas e Despesas',
+    'h1' => 'Planejador de Orçamento Gratuito',
+    'top-h2' => 'Acompanhamento de Receitas e Despesas',
+    'top-p-1' => 'Gerencie eficientemente suas finanças acompanhando sua renda total, despesas e metas de economia. Nossa ferramenta gratuita e fácil de usar ajuda você a se manter organizado e tomar decisões financeiras informadas.',
+    'top-p-2' => 'Informe sua renda e despesas e acompanhe seu progresso financeiro em tempo real. Assuma o controle de seu futuro financeiro com nosso Planejador de Orçamento. Gerencie seu orçamento pessoal e acompanhe sua renda, despesas e metas de economia com nossa ferramenta abrangente de Planejamento de Orçamento. É grátis e fácil de usar. Assuma o controle de suas finanças e alcance seus objetivos financeiros com facilidade.',
+    'TIncome' => 'Renda Total:',
+    'income' => 'Renda',
+    'TExpenses' => 'Despesas Totais:',
+    'Expenses' => 'Despesas',
+    'TSavings' => 'Economia Total:',
+    'TSavingsGoal' => 'Metas de Economia Total:',
+    'Savings' => 'Economia',
+    'Remaining' => 'Orçamento Restante:',
+    'AFinancialTool' => 'Sobre Nossa Ferramenta Financeira',
+    'AFT-p-1' => 'Nossa ferramenta de Planejamento de Orçamento permite que você assuma o controle de sua vida financeira. Se você é um comprador de casa pela primeira vez ou está economizando para suas férias dos sonhos, nossa ferramenta gratuita foi projetada para simplificar o processo.',
+    'AFT-p-2' => 'Defina metas de economia e planeje seu orçamento de forma eficaz. Com nossa solução financeira abrangente e gratuita, você pode alcançar seus objetivos financeiros com confiança.',
+    'DownloadPDF' => 'Baixar Resultado em PDF',
+    'BudgetProgress' => 'Progresso do Orçamento',
+    'MYBP' => 'Monitore o Progresso do Seu Orçamento',
+    'MYBP-p1' => 'Fique por dentro de sua saúde financeira com o acompanhamento do orçamento em tempo real. Veja sua renda total, despesas, metas de economia e orçamento restante de relance.',
+    'MYBP-p2' => 'Nossa barra de progresso do orçamento ilustra visualmente sua situação financeira, ajudando você a tomar decisões informadas e alcançar suas metas financeiras.',
+];

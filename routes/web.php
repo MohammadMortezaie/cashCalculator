@@ -23,5 +23,7 @@ $router->group(['prefix' => '{locale}'], function () use ($router) {
         return $router->app->version() . ' -  - mohammad';
     });
 
-    $router->get('/budgetPlanner', 'HomeController@budgetPlanner');
+    $router->get('/budget-planner', 'HomeController@budgetPlanner');
+    $router->get('/money-calculator', 'HomeController@moneyCalculator');
+
 });
