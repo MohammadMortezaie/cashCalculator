@@ -13,42 +13,39 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    private function setSeoAndOpenGraph($titleKey, $descriptionKey, $view)
     {
+        $request = request();
+        $prefixLang = $this->findPrefixLang($request->segment(1));
+        $localeKeys = ['en-ca', 'en-us', 'es-es', 'fr-fr', 'it-it', 'de-de', 'pt-br', 'zh-cn', 'ko-kr', 'ru-ru'];
+
+        SEOTools::setTitle(__($titleKey));
+        SEOTools::setDescription(__($descriptionKey));
+        OpenGraph::setTitle(__($titleKey));
+        OpenGraph::addProperty('locale', $prefixLang);
+        OpenGraph::addProperty('locale:alternate', $localeKeys);
+
+        return view($view);
     }
 
+
+    public function home(Request $request)
+    {
+        return $this->setSeoAndOpenGraph('home.seoTitle', 'home.seoDescription', 'home');
+    }
     public function budgetPlanner(Request $request)
     {
-
-        SEOTools::setTitle(__('BudgetPlanner.seoTitle'));
-        SEOTools::setDescription(__('BudgetPlanner.seoDescription'));
-        $prefixLang = $this->findPrefixLang($request->segment(1));
-
-        OpenGraph::setTitle(__('BudgetPlanner.seoTitle'));
-        OpenGraph::addProperty('locale', $prefixLang);
-        OpenGraph::addProperty('locale:alternate', ['en-ca', 'en-us', 'es-es', 'fr-fr', 'it-it', 'de-de', 'pt-br', 'zh-cn', 'ko-kr', 'ru-ru']);
-        // Alternate locales in Spanish, French, Italian, and German
-        // Portuguese, Chinese, Korean, Russian
-
-
-        return view('budgetPlanner');
+        return $this->setSeoAndOpenGraph('BudgetPlanner.seoTitle', 'BudgetPlanner.seoDescription', 'finance.budgetPlanner');
     }
     public function moneyCalculator(Request $request)
     {
-        SEOTools::setTitle(__('moneyCalculator.seoTitle'));
-        SEOTools::setDescription(__('moneyCalculator.seoDescription'));
-        $prefixLang = $this->findPrefixLang($request->segment(1));
-
-        OpenGraph::setTitle(__('moneyCalculator.seoTitle'));
-        OpenGraph::addProperty('locale', $prefixLang);
-        OpenGraph::addProperty('locale:alternate', ['en-ca', 'en-us', 'es-es', 'fr-fr', 'it-it', 'de-de', 'pt-br', 'zh-cn', 'ko-kr', 'ru-ru']);
-
-
-
-        return view('moneyCalculator');
-
+        return $this->setSeoAndOpenGraph('moneyCalculator.seoTitle', 'moneyCalculator.seoDescription', 'finance.moneyCalculator');
     }
 
+    public function privacyPolicy(Request $request)
+    {
+        return view('privacyPolicy');
+    }
     public function findPrefixLang($lang)
     {
         $prefix = 'en-us';

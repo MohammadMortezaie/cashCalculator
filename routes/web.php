@@ -13,17 +13,32 @@
 |
 */
 
-$router->get('/', function () use ($router) {
+$router->get('/', function () {
     return redirect('/en');
 });
 
+$router->get('/budget-planner', function () {
+    return redirect('/en/budget-planner');
+});
+$router->get('/money-calculator', function () {
+    return redirect('/en/money-calculator');
+});
+
+
+
 $router->group(['prefix' => '{locale}'], function () use ($router) {
 
-    $router->get('/', function () use ($router) {
-        return $router->app->version() . ' -  - mohammad';
+    $router->group(['prefix' => 'pdf'], function () use ($router) {
+
+        $router->get('/budget-planner', [ 'as' => 'pdf.budget-planner', 'uses' => 'PdfController@budgetPlanner']);
+        $router->get('/money-calculator', [ 'as' => 'pdf.money-calculator', 'uses' => 'PdfController@moneyCalculator']);
+
     });
 
-    $router->get('/budget-planner', 'HomeController@budgetPlanner');
-    $router->get('/money-calculator', 'HomeController@moneyCalculator');
+    $router->get('/', 'HomeController@home');
+
+    $router->get('/budget-planner', [ 'as' => 'home.budgetPlanner', 'uses' => 'HomeController@budgetPlanner'] );
+    $router->get('/money-calculator',  [ 'as' => 'home.moneyCalculator', 'uses' => 'HomeController@moneyCalculator']);
+    $router->get('/privacy-policy', [ 'as' => 'home.privacypolicy', 'uses' => 'HomeController@privacyPolicy']);
 
 });

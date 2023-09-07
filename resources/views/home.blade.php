@@ -1,0 +1,100 @@
+@extends('main')
+
+@section('head')
+    <?php
+    $seotools = app('seotools');
+    $metatags = app('seotools.metatags');
+    $twitter = app('seotools.twitter');
+    $opengraph = app('seotools.opengraph');
+    $jsonld = app('seotools.json-ld');
+    $jsonldMulti = app('seotools.json-ld-multi');
+
+    echo app('seotools')->generate();
+    ?>
+@endsection
+
+@section('content')
+    <div id="app">
+        <div class="header-content">
+            <h1>{{ __('home.h1') }}</h1>
+        </div>
+        <div class="container">
+            <div class="row bg-white">
+                <section class="col-md-12">
+                    <h3 class="h4">{{ __('home.welcomeMessage') }} </h3>
+                    <p> {{ __('home.p1') }}</p>
+                    <hr>
+
+                    <div class="col-md-4">
+                        <h2 class="h3">{{ __('home.FinancialCalculators') }}</h2>
+                        @php
+                            $lang = app()->getLocale();
+                        @endphp
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a
+                                    href="{{ route('home.budgetPlanner',['locale' => $lang ]) }}">{{ __('home.BudgetPlanner') }}</a>
+                            </li>
+                            <li class="list-group-item"><a
+                                    href="{{ route('home.moneyCalculator',['locale' => $lang ]) }}">{{ __('home.moneyCalculator') }}</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-success">
+                                    <h4 class="text-light ">{{ __('home.topic-1') }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>{{ __('home.desc-1') }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-success">
+                                    <h4 class="text-light ">{{ __('home.topic-2') }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>{{ __('home.desc-2') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+
+                            <div class="card">
+                                <div class="card-header bg-success">
+                                    <h4 class="text-light ">{{ __('home.topic-3') }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>{{ __('home.desc-3') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-success">
+                                    <h4 class="text-light ">{{ __('home.topic-4') }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>{{ __('home.desc-4') }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+@endsection

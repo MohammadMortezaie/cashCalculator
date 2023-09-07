@@ -27,7 +27,7 @@
                     <p>{{ __('moneyCalculator.top-p-2') }}</p>
                     <div class="row col-md-12">
 
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <ul>
                                 <li>{{ __('moneyCalculator.USD') }}</li>
                                 <li>{{ __('moneyCalculator.EUR') }}</li>
@@ -42,7 +42,7 @@
                                 <li>{{ __('moneyCalculator.CNY') }}</li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <img class="w-100"
                                 src="https://www.gourmetads.com/wp-content/uploads/2019/02/970x250-starbucks-nitro.jpg">
                         </div>
@@ -110,7 +110,11 @@
                     <!-- The total amount will be displayed here -->
                     <h3 id="totalDisplay"> <span class="h4">{{ __('moneyCalculator.TotalAmount') }} </span>
                         @{{ formatNumber(total) }} @{{ selectedCurrency }}</h3>
-                    <button class="btn btn-success my-2">{{ __('moneyCalculator.DownloadPDF') }}</button>
+                        <form action="{{ route('pdf.money-calculator',['locale'=>collect(request()->segments())[0]]) }}" method="GET">
+                            <input type="hidden" name="currencyData" :value="JSON.stringify(selectedCurrencyInfo)">
+                            <input type="hidden" name="total" :value="formatNumber(total)">
+                            <button type="submit" class="btn btn-success my-2">{{ __('moneyCalculator.DownloadPDF') }}</button>
+                        </form>
                     <hr>
                     <h2 class="h3">{{ __('moneyCalculator.botton-h3') }}</h2>
                     <p>{{ __('moneyCalculator.botton-p') }}</p>
@@ -372,7 +376,7 @@
                 },
             },
             computed: {
-                selectedCurrencyInfo() { // Updated computed property name
+                selectedCurrencyInfo() {
                     return this.currencies[this.selectedCurrency];
                 },
                 selectedCurrencyData() {
