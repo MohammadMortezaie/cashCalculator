@@ -32,10 +32,10 @@
                         @endphp
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><a
-                                    href="{{ route('home.budgetPlanner',['locale' => $lang ]) }}">{{ __('home.BudgetPlanner') }}</a>
+                                    href="{{ route('home.budgetPlanner',['locale' => $lang ], true) }}">{{ __('home.BudgetPlanner') }}</a>
                             </li>
                             <li class="list-group-item"><a
-                                    href="{{ route('home.moneyCalculator',['locale' => $lang ]) }}">{{ __('home.moneyCalculator') }}</a>
+                                    href="{{ route('home.moneyCalculator',['locale' => $lang ], true) }}">{{ __('home.moneyCalculator') }}</a>
                             </li>
                         </ul>
 
