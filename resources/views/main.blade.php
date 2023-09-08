@@ -125,7 +125,7 @@
         </div>
     </footer>
 
-    <script src="{{ URL::asset('js/vue2.js') }}"></script>
+    <script src="{{ URL::to($protocol . 'www.cashcalculator.net/js/vue2.js') }}"></script>
     <!-- Custom script -->
     @yield('scripts')
 
