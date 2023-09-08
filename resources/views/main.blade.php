@@ -2,20 +2,15 @@
 <html>
 
 <head>
-    @php
-        $protocol = app()->environment('production') ? 'https://' : 'http://';
-    @endphp
 
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ URL::to($protocol . 'www.cashcalculator.net/img/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ URL::to($protocol . 'www.cashcalculator.net/img/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::to(env('APP_URL') . '/img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::to(env('APP_URL') . '/img/favicon-16x16.png') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ URL::to($protocol . 'www.cashcalculator.net/css/bootstrap.min.css') }}">
-    <script src="{{ URL::to($protocol . 'www.cashcalculator.net/js/jquery.min.js') }}"></script>
-    <script src="{{ URL::to($protocol . 'www.cashcalculator.net/js/bootstrap.min.js') }}"></script>
-    <link rel="stylesheet" href="{{ URL::to($protocol . 'www.cashcalculator.net/css/main.css') }}">
+    <link rel="stylesheet" href="{{ URL::to(env('APP_URL') . '/css/bootstrap.min.css') }}">
+    <script src="{{ URL::to(env('APP_URL') . '/js/jquery.min.js') }}"></script>
+    <script src="{{ URL::to(env('APP_URL') . '/js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ URL::to(env('APP_URL') . '/css/main.css') }}">
 
     @yield('head')
 
@@ -27,7 +22,8 @@
 
             <nav class=" row navbar navbar-expand-md  navbar-dark">
                 <!-- Brand -->
-                <a class="navbar-brand" href="/{{ collect(request()->segments())[0] }}">CashCalculator<span
+                <a class="navbar-brand"
+                    href="{{ route('home', ['locale' => collect(request()->segments())[0]], true) }}">CashCalculator<span
                         class="text-success h4">.net</span></a>
                 <!-- Toggler/collapsibe Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -50,60 +46,60 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/en/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/en/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/en/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/en/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/US/flat/32.png"> {{ __('English') }} </a>
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/fr/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/fr/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/fr/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/fr/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/FR/flat/32.png"> {{ __('French') }}</a>
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/de/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/de/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/de/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/de/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/DE/flat/32.png"> {{ __('German') }}</a>
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/es/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/es/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/es/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/es/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/ES/flat/32.png"> {{ __('Spanish') }}</a>
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/it/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/it/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/it/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/it/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/IT/flat/32.png"> {{ __('Italian') }}</a>
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/ko/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/ko/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/ko/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/ko/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/KR/flat/32.png"> {{ __('Korean') }}</a>
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/pt-br/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/pt-br/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/pt-br/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/pt-br/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/BR/flat/32.png"> {{ __('Portuguese') }}</a>
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/ru/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/ru/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/ru/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/ru/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/RU/flat/32.png"> {{ __('Russian') }}</a>
                                 <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ request()->getSchemeAndHttpHost() . '/zh-cn/' }}"
+                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/zh-cn/' }}"
                                 @else
-                                href="{{ request()->getSchemeAndHttpHost() . '/zh-cn/' . collect(request()->segments())->last() }}" @endif>
+                                href="{{ env('APP_URL') . '/zh-cn/' . collect(request()->segments())->last() }}" @endif>
                                     <img src="https://flagsapi.com/CN/flat/32.png"> {{ __('Chinese') }}</a>
                             </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
-                                href="/{{ collect(request()->segments())[0] }}">{{ __('home.home') }}</a>
+                                href="{{ route('home', ['locale' => collect(request()->segments())[0]], true) }}">{{ __('home.home') }}</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link"
-                                href="{{ route('home.privacypolicy', ['locale' => collect(request()->segments())[0]]) }}">{{ __('home.privacy_policy_title') }}</a>
+                                href="{{ route('home.privacypolicy', ['locale' => collect(request()->segments())[0]], true) }}">{{ __('home.privacy_policy_title') }}</a>
                         </li>
 
                     </ul>
@@ -125,7 +121,7 @@
         </div>
     </footer>
 
-    <script src="{{ URL::to($protocol . 'www.cashcalculator.net/js/vue2.js') }}"></script>
+    <script src="{{ URL::to(env('APP_URL') . '/js/vue2.js') }}"></script>
     <!-- Custom script -->
     @yield('scripts')
 

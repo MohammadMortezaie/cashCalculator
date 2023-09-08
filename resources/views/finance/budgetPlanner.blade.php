@@ -114,7 +114,7 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('pdf.budget-planner', ['locale' => collect(request()->segments())[0]]) }}"
+                    <form action="{{ route('pdf.budget-planner', ['locale' => collect(request()->segments())[0]], true) }}"
                         method="GET">
                         <input type="hidden" name="incomeFields" :value="JSON.stringify(incomeFields)">
                         <input type="hidden" name="expensesFields" :value="JSON.stringify(expensesFields)">

@@ -108,7 +108,7 @@
                     <!-- The total amount will be displayed here -->
                     <h3 id="totalDisplay"> <span class="h4">{{ __('moneyCalculator.TotalAmount') }} </span>
                         @{{ formatNumber(total) }} @{{ selectedCurrency }}</h3>
-                    <form action="{{ route('pdf.money-calculator', ['locale' => collect(request()->segments())[0]]) }}"
+                    <form action="{{ route('pdf.money-calculator', ['locale' => collect(request()->segments())[0]], true) }}"
                         method="GET">
                         <input type="hidden" name="currencyData" :value="JSON.stringify(selectedCurrencyInfo)">
                         <input type="hidden" name="total" :value="formatNumber(total)">
