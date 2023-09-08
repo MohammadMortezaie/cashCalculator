@@ -48,5 +48,17 @@ class PdfController extends Controller
 
     }
 
+    public function budget503020(Request $request){
+
+        $this->validate($request,[
+            'salary' => 'required',
+            'T50' => 'required',
+            'T30' => 'required',
+            'T20' => 'required',
+        ]);
+        $data = $request->all();
+
+        return view('pdf.503020',$data);
+    }
 
 }

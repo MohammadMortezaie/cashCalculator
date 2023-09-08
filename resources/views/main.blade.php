@@ -117,7 +117,7 @@
 
     <footer class="mt-4 navbar-cashcalculator">
         <div class="container ">
-            <div class="row text-light py-2">
+            <div class="row text-light py-2 ml-1">
                 © 2023 - CashCalculator.net
             </div>
         </div>
