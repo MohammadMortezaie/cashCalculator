@@ -122,9 +122,12 @@
     <footer class="mt-4 navbar-cashcalculator">
         <div class="container ">
             <div class="row text-light py-2">
+                <h4>
+                    {{$protocol}}
+                </h4> <br>
                 © 2023 - CashCalculator.net
             </div>
-        </div>
+         </div>
     </footer>
 
     <script src="{{ URL::asset('js/vue2.js') }}"></script>
