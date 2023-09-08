@@ -43,8 +43,7 @@
                             </ul>
                         </div>
                         <div class="col-md-8">
-                            <img class="w-100"
-                                src="https://www.gourmetads.com/wp-content/uploads/2019/02/970x250-starbucks-nitro.jpg">
+                            {{-- <img class="w-100" src=""> --}}
                         </div>
                     </div>
                     <hr>
@@ -101,8 +100,7 @@
                 </section>
 
                 <section class="col-md-12 mt-3">
-                    <img class="w-100"
-                        src="https://www.gourmetads.com/wp-content/uploads/2019/02/970x250-starbucks-nitro.jpg">
+                    {{-- <img class="w-100" src=""> --}}
                 </section>
 
                 <section class="col-md-12 mt-3">
@@ -110,11 +108,13 @@
                     <!-- The total amount will be displayed here -->
                     <h3 id="totalDisplay"> <span class="h4">{{ __('moneyCalculator.TotalAmount') }} </span>
                         @{{ formatNumber(total) }} @{{ selectedCurrency }}</h3>
-                        <form action="{{ route('pdf.money-calculator',['locale'=>collect(request()->segments())[0]]) }}" method="GET">
-                            <input type="hidden" name="currencyData" :value="JSON.stringify(selectedCurrencyInfo)">
-                            <input type="hidden" name="total" :value="formatNumber(total)">
-                            <button type="submit" class="btn btn-success my-2">{{ __('moneyCalculator.DownloadPDF') }}</button>
-                        </form>
+                    <form action="{{ route('pdf.money-calculator', ['locale' => collect(request()->segments())[0]]) }}"
+                        method="GET">
+                        <input type="hidden" name="currencyData" :value="JSON.stringify(selectedCurrencyInfo)">
+                        <input type="hidden" name="total" :value="formatNumber(total)">
+                        <button type="submit"
+                            class="btn btn-success my-2">{{ __('moneyCalculator.DownloadPDF') }}</button>
+                    </form>
                     <hr>
                     <h2 class="h3">{{ __('moneyCalculator.botton-h3') }}</h2>
                     <p>{{ __('moneyCalculator.botton-p') }}</p>

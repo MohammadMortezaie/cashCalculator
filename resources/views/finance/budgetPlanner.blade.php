@@ -96,8 +96,7 @@
                 </section>
 
                 <section class="col-md-12 mt-3">
-                    <img class="w-100"
-                        src="https://www.gourmetads.com/wp-content/uploads/2019/02/970x250-starbucks-nitro.jpg">
+                    {{-- <img class="w-100" src=""> --}}
                 </section>
 
                 <section class="col-md-4 mt-3">
@@ -115,16 +114,17 @@
                         </div>
                     </div>
 
-                      <form action="{{ route('pdf.budget-planner',['locale'=>collect(request()->segments())[0]]) }}" method="GET">
-                            <input type="hidden" name="incomeFields" :value="JSON.stringify(incomeFields)">
-                            <input type="hidden" name="expensesFields" :value="JSON.stringify(expensesFields)">
-                            <input type="hidden" name="savingsFields" :value="JSON.stringify(savingsFields)">
-                            <input type="hidden" name="TIncome" :value="formatNumber(income)">
-                            <input type="hidden" name="TExpenses" :value="formatNumber(expenses)">
-                            <input type="hidden" name="TSavingsGoal" :value="formatNumber(savings)">
-                            <input type="hidden" name="Remaining" :value="formatNumber(remainingBudget)">
-                            <button type="submit" class="btn btn-success my-2">{{ __('BudgetPlanner.DownloadPDF') }}</button>
-                        </form>
+                    <form action="{{ route('pdf.budget-planner', ['locale' => collect(request()->segments())[0]]) }}"
+                        method="GET">
+                        <input type="hidden" name="incomeFields" :value="JSON.stringify(incomeFields)">
+                        <input type="hidden" name="expensesFields" :value="JSON.stringify(expensesFields)">
+                        <input type="hidden" name="savingsFields" :value="JSON.stringify(savingsFields)">
+                        <input type="hidden" name="TIncome" :value="formatNumber(income)">
+                        <input type="hidden" name="TExpenses" :value="formatNumber(expenses)">
+                        <input type="hidden" name="TSavingsGoal" :value="formatNumber(savings)">
+                        <input type="hidden" name="Remaining" :value="formatNumber(remainingBudget)">
+                        <button type="submit" class="btn btn-success my-2">{{ __('BudgetPlanner.DownloadPDF') }}</button>
+                    </form>
                 </section>
 
                 <section class="col-md-4 mt-3">
