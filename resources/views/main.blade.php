@@ -3,7 +3,7 @@
 
 <head>
     @php
-    $protocol = app()->environment('production') ? 'https://' : 'http://';
+        $protocol = app()->environment('production') ? 'https://' : 'http://';
     @endphp
 
     <link rel="icon" type="image/png" sizes="32x32"
@@ -120,9 +120,6 @@
     <footer class="mt-4 navbar-cashcalculator">
         <div class="container ">
             <div class="row text-light py-2">
-                <h4>
-                    {{ $protocol }}
-                </h4> <br>
                 © 2023 - CashCalculator.net
             </div>
         </div>

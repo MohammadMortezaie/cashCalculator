@@ -116,4 +116,12 @@ $app->router->group([
 });
 app('translator')->setLocale('en');
 
+$app->instance('path.public', app()->basePath() . '/public');
+$app->instance('path.storage', app()->basePath() . '/storage');
+$app->instance('path.base', app()->basePath());
+$app->bind('url', function ($app) {
+    return new \Laravel\Lumen\Routing\UrlGenerator($app);
+});
+
+
 return $app;
