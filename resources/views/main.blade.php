@@ -2,15 +2,22 @@
 <html>
 
 <head>
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('img/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('img/favicon-16x16.png') }}">
+    @php
+
+        $protocol = app('request')->getScheme(); // Get the current request's protocol (http or https)
+    @endphp
+
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ URL::to($protocol . '://www.cashcalculator.net/img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ URL::to($protocol . '://www.cashcalculator.net/img/favicon-16x16.png') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
-    <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ URL::to($protocol . '://www.cashcalculator.net/css/bootstrap.min.css') }}">
+    <script src="{{ URL::to($protocol . '://www.cashcalculator.net/js/jquery.min.js') }}"></script>
+    <script src="{{ URL::to($protocol . '://www.cashcalculator.net/js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ URL::to($protocol . '://www.cashcalculator.net/css/main.css') }}">
 
-    <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
 
     @yield('head')
 
@@ -115,7 +122,7 @@
     <footer class="mt-4 navbar-cashcalculator">
         <div class="container ">
             <div class="row text-light py-2">
-                ©  2023 - CashCalculator.net
+                © 2023 - CashCalculator.net
             </div>
         </div>
     </footer>
