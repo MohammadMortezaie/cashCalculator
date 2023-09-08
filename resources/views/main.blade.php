@@ -7,15 +7,15 @@
     @endphp
 
     <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ URL::to($protocol . '://www.cashcalculator.net/img/favicon-32x32.png') }}">
+        href="{{ URL::to($protocol . 'www.cashcalculator.net/img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ URL::to($protocol . '://www.cashcalculator.net/img/favicon-16x16.png') }}">
+        href="{{ URL::to($protocol . 'www.cashcalculator.net/img/favicon-16x16.png') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ URL::to($protocol . '://www.cashcalculator.net/css/bootstrap.min.css') }}">
-    <script src="{{ URL::to($protocol . '://www.cashcalculator.net/js/jquery.min.js') }}"></script>
-    <script src="{{ URL::to($protocol . '://www.cashcalculator.net/js/bootstrap.min.js') }}"></script>
-    <link rel="stylesheet" href="{{ URL::to($protocol . '://www.cashcalculator.net/css/main.css') }}">
+    <link rel="stylesheet" href="{{ URL::to($protocol . 'www.cashcalculator.net/css/bootstrap.min.css') }}">
+    <script src="{{ URL::to($protocol . 'www.cashcalculator.net/js/jquery.min.js') }}"></script>
+    <script src="{{ URL::to($protocol . 'www.cashcalculator.net/js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ URL::to($protocol . 'www.cashcalculator.net/css/main.css') }}">
 
     @yield('head')
 
