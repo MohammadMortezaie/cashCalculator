@@ -49,7 +49,7 @@
                                 </li>
                                 <li class="h6 my-4">
                                     20% of $ @{{ salary }} {{ __('503020.savings') }} <br>
-                                    ( @{{ salary }} × 20) / 100 = $<strong>@{{ formatNumber(20) }} </strong>
+                                    ( @{{ salary }} × 20) / 100 = $<strong>@{{ formatNumber(T20) }} </strong>
                                 </li>
                             </ul>
 

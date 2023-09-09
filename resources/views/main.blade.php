@@ -12,8 +12,8 @@
     <script src="{{ URL::to(env('APP_URL') . '/js/bootstrap.min.js') }}"></script>
     <link rel="stylesheet" href="{{ URL::to(env('APP_URL') . '/css/main.css') }}">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4984866739858484"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4984866739858484" crossorigin="anonymous"></script>
+    
     @yield('head')
 
 </head>
