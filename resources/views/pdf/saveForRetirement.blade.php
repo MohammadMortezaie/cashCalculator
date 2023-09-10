@@ -72,13 +72,13 @@
                     </h4>
                     <ul>
                         <li><strong>{{ __('saveForRetirement.additional_amount_needed') }}</strong>
-                            {{ $result['amount'] }}
+                            ${{ $result['amount'] }}
                         </li>
                         <li><strong>{{ __('saveForRetirement.total_principal') }}</strong>
-                            {{ $result['principal'] }}
+                            ${{ $result['principal'] }}
                         </li>
                         <li><strong>{{ __('saveForRetirement.total_interest') }}</strong>
-                            {{ $result['interest'] }}
+                            ${{ $result['interest'] }}
                         </li>
                     </ul>
                 @endif
