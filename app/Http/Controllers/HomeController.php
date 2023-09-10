@@ -46,6 +46,11 @@ class HomeController extends Controller
     {
         return $this->setSeoAndOpenGraph('503020.seoTitle', '503020.top-p-1', 'finance.503020');
     }
+    public function saveForRetirement(Request $request)
+    {
+        return $this->setSeoAndOpenGraph('saveForRetirement.seoTitle', 'saveForRetirement.seoDescription', 'finance.saveForRetirement');
+    }
+
 
     public function privacyPolicy(Request $request)
     {

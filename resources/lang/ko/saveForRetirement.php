@@ -1,0 +1,46 @@
+<?php
+
+return [
+    'h1' => "퇴직 저축 계산기",
+    'seoTitle' => "무료 연금 저축 계산기",
+    'seoDescription' => "우리의 무료 연금 저축 계산기를 사용하여 저축 목표를 추정하세요. 복리 이자 공식을 이해하고 월별 또는 연간 기여금을 계산하며 무료로 PDF 보고서를 생성하세요. 지금부터 재정적 미래를 안전하게 지키세요.",
+    'future_value_formula' => '현재 저축액의 미래 가치를 계산하는 데 사용되는 공식은 복리 이자에 기반합니다. 이 공식은 고정 연간 이율로 현재 저축액이 얼마나 늘어날지 추정합니다.',
+    'future_value_equation' => '미래 가치 (FV) = 현재 가치 (PV) * (1 + 이자율)^년 수 (n)',
+    'fv_description' => '미래 가치 (FV)는 향후 저축액입니다.',
+    'pv_description' => '현재 가치 (PV)는 현재 저축액입니다.',
+    'interest_rate_description' => '이자율은 연간 이자율입니다 (소수로 표시).',
+    'years_description' => '년 수는 돈이 투자되거나 저축되는 연도 수입니다.',
+
+    'amount_needed' => '필요한 금액은 원하는 연금 저축 목표에 도달하기 위해 추가로 저축해야 하는 금액을 나타냅니다. 이것은 추정된 미래 가치 (FV)에서 연금 저축 목표 (neededAmount)를 뺀 것입니다.',
+
+    'monthly_payment_formula' => '월별 기여금 계산은 연금 목표에 도달하기 위해 매월 얼마나 저축해야 하는지 결정합니다. 이것은 특정한 미래 목표를 달성하기 위해 정기적으로 투자해야 하는 고정된 금액을 사용하는 연금 지급 개념을 사용합니다.',
+    'monthly_payment_equation' => '월별 지급액 = (필요한 금액 * 월 이자율) / (1 - (1 + 월 이자율)^(-개월 수))',
+    'monthly_payment_description' => '월별 지급액은 매월 저축해야 하는 금액입니다.',
+    'monthly_payment_amount_needed_description' => '필요한 금액은 추가로 저축해야 하는 금액입니다 (amountNeeded).',
+    'monthly_payment_interest_rate_description' => '월 이자율은 연간 이자율의 월별 동등물입니다 (invReturn을 12로 나눈 값).',
+    'monthly_payment_months_description' => '월 수는 은퇴까지의 총 개월 수입니다 (년도로 계산한 개월 수).',
+
+    'yearly_payment' => '연간 기여금 계산은 월별 지급과 유사하지만 연간 기여금을 고려합니다. 연금 목표에 도달하기 위해 연간 얼마나 저축해야 하는지 계산합니다.',
+    'yearly_payment_equation' => '연간 지급액 = 필요한 금액 / ((1 - (1 + 연간 이자율)^(-년 수)) / (연간 이자율))',
+    'yearly_payment_description' => '연간 기여금은 매년 저축해야 하는 금액입니다.',
+    'yearly_payment_amount_needed_description' => '필요한 금액은 추가로 저축해야 하는 금액입니다 (amountNeeded).',
+    'yearly_payment_interest_rate_description' => '연간 이자율은 연간 이자율입니다 (invReturn을 소수로 표시).',
+    'yearly_payment_years_description' => '년 수는 은퇴까지의 총 연도 수입니다 (yearsToSave).',
+    'your_age_now' => '현재 나이',
+    'your_planned_retirement_age' => '계획된 은퇴 나이',
+    'amount_needed_at_retirement_age' => '은퇴 시 필요한 금액',
+    'your_retirement_savings_now' => '현재 연금 저축',
+    'average_investment_return' => '평균 투자 수익률',
+    'calculate_button' => '계산',
+    'clear_button' => '지우기',
+
+    'results' => '결과:',
+    'monthly_savings_plan' => '67세까지 매월 저축하는 경우',
+    'amount_to_save_monthly' => '매월 저축해야 하는 금액:',
+    'total_principal' => '총 원금:',
+    'total_interest' => '총 이자:',
+    'yearly_savings_plan' => '67세까지 매년 저축하는 경우',
+    'amount_to_save_yearly' => '매년 저축해야 하는 금액:',
+    'lump_sum_savings_plan' => '지금 가지고 있는 경우',
+    'additional_amount_needed' => '추가로 필요한 금액:',
+];

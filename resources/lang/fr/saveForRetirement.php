@@ -1,0 +1,46 @@
+<?php
+
+return [
+    'h1' => "Calculatrice d'Épargne-Retraite",
+    'seoTitle' => "Calculatrice gratuite d'épargne-retraite",
+    'seoDescription' => "Utilisez notre calculatrice gratuite d'épargne-retraite pour estimer vos objectifs d'épargne. Comprenez la formule d'intérêt composé, calculez les contributions mensuelles ou annuelles et générez un rapport PDF gratuitement. Sécurisez votre avenir financier dès aujourd'hui.",
+    'future_value_formula' => "La formule utilisée pour calculer la valeur future de vos économies actuelles est basée sur l'intérêt composé. Elle estime combien vos économies actuelles augmenteront au fil du temps à un taux d'intérêt annuel fixe.",
+    'future_value_equation' => "Valeur future (VF) = Valeur actuelle (VA) * (1 + Taux d'intérêt)^Nombre d'années (n)",
+    'fv_description' => "VF (Valeur future) est le montant auquel vos économies augmenteront dans le futur.",
+    'pv_description' => "VA (Valeur actuelle) représente vos économies actuelles.",
+    'interest_rate_description' => "Le taux d'intérêt est le taux d'intérêt annuel (exprimé en décimal).",
+    'years_description' => "Le Nombre d'années est le nombre d'années pendant lesquelles votre argent est investi ou épargné.",
+
+    'amount_needed' => "Le montant nécessaire représente le montant supplémentaire que vous devez épargner pour atteindre votre objectif d'épargne-retraite souhaité. Il est calculé en soustrayant la valeur future estimée (VF) de votre objectif d'épargne-retraite (neededAmount).",
+
+    'monthly_payment_formula' => "Le calcul du paiement mensuel détermine combien vous devez épargner chaque mois pour atteindre votre objectif de retraite. Il utilise le concept de paiement d'annuité, qui est le montant fixe que vous devez investir régulièrement pour atteindre un objectif futur spécifique.",
+    'monthly_payment_equation' => "Paiement mensuel = (Montant nécessaire * Taux d'intérêt mensuel) / (1 - (1 + Taux d\'intérêt mensuel)^(-Nombre de mois))",
+    'monthly_payment_description' => "Le paiement mensuel est le montant que vous devez épargner chaque mois.",
+    'monthly_payment_amount_needed_description' => "Le Montant nécessaire est le montant supplémentaire que vous devez épargner (amountNeeded).",
+    'monthly_payment_interest_rate_description' => "Le Taux d\'intérêt mensuel est l'équivalent mensuel de votre taux d'intérêt annuel (invReturn divisé par 12).",
+    'monthly_payment_months_description' => "Le Nombre de mois est le nombre total de mois jusqu'à votre retraite (annéesPourÉconomiser multiplié par 12).",
+
+    'yearly_payment' => "Le calcul du Paiement annuel est similaire au paiement mensuel, mais il prend en compte les contributions annuelles. Il calcule le montant que vous devez épargner annuellement pour atteindre votre objectif de retraite.",
+    'yearly_payment_equation' => "Paiement annuel = Montant nécessaire / ((1 - (1 + Taux d\'intérêt annuel)^(-Nombre d\'années)) / (Taux d\'intérêt annuel))",
+    'yearly_payment_description' => "Le paiement annuel est le montant que vous devez épargner chaque année.",
+    'yearly_payment_amount_needed_description' => "Le Montant nécessaire est le montant supplémentaire que vous devez épargner (amountNeeded).",
+    'yearly_payment_interest_rate_description' => "Le Taux d\'intérêt annuel est votre taux d'intérêt annuel (invReturn en décimal).",
+    'yearly_payment_years_description' => "Le Nombre d\'années est le nombre total d'années jusqu'à votre retraite (annéesPourÉconomiser).",
+    'your_age_now' => "Votre âge actuel",
+    'your_planned_retirement_age' => "Votre âge de retraite prévu",
+    'amount_needed_at_retirement_age' => "Montant nécessaire à l'âge de la retraite",
+    'your_retirement_savings_now' => "Vos économies pour la retraite actuelles",
+    'average_investment_return' => "Rendement moyen de l'investissement",
+    'calculate_button' => "Calculer",
+    'clear_button' => "Effacer",
+
+    'results' => "Résultats:",
+    'monthly_savings_plan' => "Si vous épargnez chaque mois jusqu'à 67 ans",
+    'amount_to_save_monthly' => "Montant à épargner chaque mois:",
+    'total_principal' => "Capital total:",
+    'total_interest' => "Intérêts totaux:",
+    'yearly_savings_plan' => "Si vous épargnez chaque année jusqu'à 67 ans",
+    'amount_to_save_yearly' => "Montant à épargner chaque année:",
+    'lump_sum_savings_plan' => "Si vous l'avez maintenant",
+    'additional_amount_needed' => "Montant supplémentaire nécessaire:",
+];

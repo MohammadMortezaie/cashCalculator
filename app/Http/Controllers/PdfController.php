@@ -61,4 +61,18 @@ class PdfController extends Controller
         return view('pdf.503020',$data);
     }
 
+
+    public function saveForRetirement(Request $request){
+
+        $this->validate($request,[
+            'results' => 'required',
+        ]);
+
+        $data = [
+            'results' => json_decode($request->input('results') , true),
+        ];
+
+        return view('pdf.saveForRetirement',$data);
+    }
+
 }

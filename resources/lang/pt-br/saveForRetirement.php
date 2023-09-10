@@ -1,0 +1,46 @@
+<?php
+
+return [
+    'h1' => "Calculadora de Poupança para a Aposentadoria",
+    'seoTitle' => "Calculadora Gratuita de Economia para Aposentadoria",
+    'seoDescription' => "Use nossa Calculadora Gratuita de Economia para Aposentadoria para estimar suas metas de economia. Compreenda a fórmula de juros compostos, calcule contribuições mensais ou anuais e gere um relatório em PDF gratuitamente. Garanta seu futuro financeiro hoje.",
+    'future_value_formula' => 'A fórmula usada para calcular o valor futuro das suas economias atuais é baseada em juros compostos. Ela estima o quanto suas economias atuais crescerão ao longo do tempo com uma taxa de juros anual fixa.',
+    'future_value_equation' => 'Valor Futuro (VF) = Valor Presente (VP) * (1 + Taxa de Juros)^Número de Anos (n)',
+    'fv_description' => 'VF (Valor Futuro) é o valor que suas economias alcançarão no futuro.',
+    'pv_description' => 'VP (Valor Presente) são suas economias atuais.',
+    'interest_rate_description' => 'Taxa de Juros é a taxa de juros anual (expressa como decimal).',
+    'years_description' => 'Número de Anos é a quantidade de anos em que seu dinheiro está investido ou poupado.',
+
+    'amount_needed' => 'O valor necessário representa o valor adicional que você precisa economizar para alcançar sua meta de economia para a aposentadoria. Ele é calculado subtraindo o valor futuro estimado (VF) de sua meta de economia para a aposentadoria (valor necessário).',
+
+    'monthly_payment_formula' => 'O cálculo do pagamento mensal determina quanto você precisa economizar a cada mês para alcançar sua meta de aposentadoria. Ele usa o conceito de pagamento de anuidade, que é o valor fixo que você precisa investir regularmente para atingir uma meta futura específica.',
+    'monthly_payment_equation' => 'Pagamento Mensal = (Valor Necessário * Taxa de Juros Mensal) / (1 - (1 + Taxa de Juros Mensal)^(-Número de Meses))',
+    'monthly_payment_description' => 'O pagamento mensal é o valor que você precisa economizar todos os meses.',
+    'monthly_payment_amount_needed_description' => 'Valor Necessário é o valor adicional que você precisa economizar (valor necessário).',
+    'monthly_payment_interest_rate_description' => 'Taxa de Juros Mensal é o equivalente mensal de sua taxa de juros anual (invReturn dividido por 12).',
+    'monthly_payment_months_description' => 'Número de Meses é o total de meses até sua aposentadoria (Número de Anos multiplicado por 12).',
+
+    'yearly_payment' => 'O cálculo do pagamento anual é semelhante ao pagamento mensal, mas considera contribuições anuais. Ele calcula quanto você precisa economizar anualmente para atingir sua meta de aposentadoria.',
+    'yearly_payment_equation' => 'Pagamento Anual = Valor Necessário / ((1 - (1 + Taxa de Juros Anual)^(-Número de Anos)) / (Taxa de Juros Anual))',
+    'yearly_payment_description' => 'O pagamento anual é o valor que você precisa economizar a cada ano.',
+    'yearly_payment_amount_needed_description' => 'Valor Necessário é o valor adicional que você precisa economizar (valor necessário).',
+    'yearly_payment_interest_rate_description' => 'Taxa de Juros Anual é sua taxa de juros anual (invReturn como decimal).',
+    'yearly_payment_years_description' => 'Número de Anos é o total de anos até sua aposentadoria (Número de Anos para Poupar).',
+    'your_age_now' => 'Sua idade atual',
+    'your_planned_retirement_age' => 'Sua idade de aposentadoria planejada',
+    'amount_needed_at_retirement_age' => 'Valor necessário na idade de aposentadoria',
+    'your_retirement_savings_now' => 'Suas economias de aposentadoria atuais',
+    'average_investment_return' => 'Taxa média de retorno do investimento',
+    'calculate_button' => 'Calcular',
+    'clear_button' => 'Limpar',
+
+    'results' => 'Resultados:',
+    'monthly_savings_plan' => 'Se você economizar todo mês até os 67 anos',
+    'amount_to_save_monthly' => 'Valor a ser economizado todo mês:',
+    'total_principal' => 'Valor Principal Total:',
+    'total_interest' => 'Total de Juros:',
+    'yearly_savings_plan' => 'Se você economizar todo ano até os 67 anos',
+    'amount_to_save_yearly' => 'Valor a ser economizado todo ano:',
+    'lump_sum_savings_plan' => 'Se você tiver agora',
+    'additional_amount_needed' => 'Valor Adicional Necessário:',
+];

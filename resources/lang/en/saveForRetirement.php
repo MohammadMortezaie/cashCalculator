@@ -1,0 +1,46 @@
+<?php
+
+return [
+    'h1' => "Retirement Savings Calculator",
+    'seoTitle' => "Free Retirement Savings Calculator",
+    'seoDescription' => "Use our free Retirement Savings Calculator to estimate your savings goals. Understand the compound interest formula, calculate monthly or yearly contributions, and generate a PDF report for free. Secure your financial future today.",
+    'future_value_formula' => 'The formula used for calculating the futureValue of your current savings is based on compound interest. It estimates how much your current savings will grow over time with a fixed annual interest rate.',
+    'future_value_equation' => 'Future Value (FV) = Present Value (PV) * (1 + Interest Rate)^Number of Years (n)',
+    'fv_description' => 'FV (Future Value) is the amount your savings will grow to in the future.',
+    'pv_description' => 'PV (Present Value) is your current savings.',
+    'interest_rate_description' => 'Interest Rate is the annual interest rate (expressed as a decimal).',
+    'years_description' => 'Number of Years is the number of years your money is invested or saved.',
+
+    'amount_needed' => 'The amountNeeded represents the additional amount you need to save to reach your desired retirement savings goal. It\'s calculated by subtracting the estimated future value (futureValue) from your retirement savings goal (neededAmount).',
+
+    'monthly_payment_formula' => 'The monthlyPayment calculation determines how much you need to save each month to reach your retirement goal. It uses the concept of an annuity payment, which is the fixed amount you need to invest regularly to achieve a specific future goal.',
+    'monthly_payment_equation' => 'Monthly Payment = (Amount Needed * Monthly Interest Rate) / (1 - (1 + Monthly Interest Rate)^(-Number of Months))',
+    'monthly_payment_description' => 'Monthly Payment is the amount you need to save every month.',
+    'monthly_payment_amount_needed_description' => 'Amount Needed is the additional amount you need to save (amountNeeded).',
+    'monthly_payment_interest_rate_description' => 'Monthly Interest Rate is the monthly equivalent of your annual interest rate (invReturn divided by 12).',
+    'monthly_payment_months_description' => 'Number of Months is the total number of months until your retirement (yearsToSave multiplied by 12).',
+
+    'yearly_payment' => 'The yearlyPayment calculation is similar to the monthly payment but considers yearly contributions. It calculates how much you need to save annually to reach your retirement goal.',
+    'yearly_payment_equation' => 'Yearly Payment = Amount Needed / ((1 - (1 + Yearly Interest Rate)^(-Number of Years)) / (Yearly Interest Rate))',
+    'yearly_payment_description' => 'Yearly Payment is the amount you need to save every year.',
+    'yearly_payment_amount_needed_description' => 'Amount Needed is the additional amount you need to save (amountNeeded).',
+    'yearly_payment_interest_rate_description' => 'Yearly Interest Rate is your annual interest rate (invReturn as a decimal).',
+    'yearly_payment_years_description' => 'Number of Years is the total number of years until your retirement (yearsToSave).',
+    'your_age_now' => 'Your age now',
+    'your_planned_retirement_age' => 'Your planned retirement age',
+    'amount_needed_at_retirement_age' => 'Amount needed at the retirement age',
+    'your_retirement_savings_now' => 'Your retirement savings now',
+    'average_investment_return' => 'Average investment return',
+    'calculate_button' => 'Calculate',
+    'clear_button' => 'Clear',
+
+    'results' => 'Results:',
+    'monthly_savings_plan' => 'If you save every month until 67',
+    'amount_to_save_monthly' => 'Amount to Save Every Month:',
+    'total_principal' => 'Total Principal:',
+    'total_interest' => 'Total Interest:',
+    'yearly_savings_plan' => 'If you save every year until 67',
+    'amount_to_save_yearly' => 'Amount to Save Every Year:',
+    'lump_sum_savings_plan' => 'If you have it now',
+    'additional_amount_needed' => 'Additional Amount Needed:',
+];

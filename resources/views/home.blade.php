@@ -40,6 +40,9 @@
                             <li class="list-group-item"><a
                                     href="{{ route('home.503020',['locale' => $lang ], true) }}">{{ __('503020.h1') }}</a>
                             </li>
+                            <li class="list-group-item"><a
+                                href="{{ route('home.saveForRetirement',['locale' => $lang ], true) }}">{{ __('saveForRetirement.h1') }}</a>
+                        </li>
                         </ul>
 
                     </div>
