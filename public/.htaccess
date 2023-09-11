@@ -30,10 +30,5 @@
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 
-    RewriteBase /
-
-    RewriteCond %{THE_REQUEST} /index [NC]
-    RewriteRule ^ / [R=302,L,NE]
-
 
 </IfModule>
