@@ -17,7 +17,7 @@
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+    RewriteRule ^(?!index\.php).*$ index.php [L]
 
     # If we receive a forwarded http request from a proxy...
     RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
@@ -28,6 +28,5 @@
 
     # Redirect to https version
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
 
 </IfModule>
