@@ -24,12 +24,6 @@ class LanguageMiddleware
         }
         app()->setLocale($lang);
 
-        $url = $request->url();
-        // Check if the URL contains '/index.php/' and remove it
-        if (strpos($url, '/index.php/') !== false) {
-            $url = str_replace('/index.php/', '/', $url);
-            return redirect()->to($url, 301);
-        }
 
         return $next($request);
     }
