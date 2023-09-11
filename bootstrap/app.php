@@ -110,6 +110,11 @@ $app->register(Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class);
 |
 */
 
+$app->bind('path.public', function () {
+    return __DIR__.'/../public';
+});
+
+
 $app->router->group([
     'namespace' => 'App\Http\Controllers',
 ], function ($router) {
