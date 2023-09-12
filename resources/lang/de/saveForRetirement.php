@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'seoTitle' => "Free Retirement Savings Calculator",
+    'seoTitle' => "Kostenloser Rentensparrechner",
     'seoDescription' => "Use our free Retirement Savings Calculator to estimate your savings goals. Understand the compound interest formula, calculate monthly or yearly contributions, and generate a PDF report for free. Secure your financial future today.",
     'introText' => "Welcome to our Retirement Savings Calculator! With this free online tool, you can calculate your future retirement savings and generate detailed results in PDF format. We\'ll also explain the formulas used for the calculations, ensuring you have a clear understanding of your financial planning.",
     'future_value_formula' => "Future Value of Retirement Savings (FV)",
