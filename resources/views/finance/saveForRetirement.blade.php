@@ -69,6 +69,7 @@
 
                         <label class="h5"
                             for="initialSavings">{{ __('saveForRetirement.initialSavingsLabel') }}</label>
+                            <small>@{{ formatNumber(initialSavings) }}</small>  <br>
                         <small>{{ __('saveForRetirement.initialSavingsExplanation') }}</small>
                         <br>
                         <div class="input-group mb-3">
@@ -94,12 +95,14 @@
                         <div class="form-group">
                             <label class="h5"
                                 for="numberOfYears">{{ __('saveForRetirement.numberOfYearsLabel') }}</label>
+                                <small>@{{ formatNumber(numberOfYears) }}</small>  <br>
                             <small>{{ __('saveForRetirement.numberOfYearsExplanation') }}</small>
                             <input type="number" min="1" class="form-control" v-model="numberOfYears">
                         </div>
                         <hr>
                         <label class="h5"
                             for="futureValueGoal">{{ __('saveForRetirement.futureValueGoalLabel') }}</label>
+                            <small>@{{ formatNumber(futureValueGoal) }}</small> <br>
                         <small>{{ __('saveForRetirement.futureValueGoalExplanation') }}</small>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
