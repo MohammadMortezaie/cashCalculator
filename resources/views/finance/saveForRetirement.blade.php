@@ -16,28 +16,29 @@
 @section('content')
     <div id="app">
         <div class="header-content">
-            <h1> {{ __('saveForRetirement.seoTitle') }}</h1>
+            <h1>{{ __('saveForRetirement.seoTitle') }}</h1>
         </div>
         <div class="container">
             <div class="row bg-white">
                 <section class="col-md-12">
+                    <p>{{ __('saveForRetirement.introText') }}</p>
+                    <p>{{ __('saveForRetirement.seoDescription') }}</p>
                     <p>{{ __('saveForRetirement.future_value_formula') }}</p>
-                    <h5 class="h6 alert alert-info">
-                        {{ __('saveForRetirement.future_value_equation') }}
-                    </h5>
 
+                    <h5 class="h6 alert alert-info">
+                        FV = PV × (1 + r)^n
+                    </h5>
                     <ul>
                         <li>{{ __('saveForRetirement.fv_description') }}</li>
                         <li>{{ __('saveForRetirement.pv_description') }}</li>
                         <li>{{ __('saveForRetirement.interest_rate_description') }}</li>
                         <li>{{ __('saveForRetirement.years_description') }}</li>
                     </ul>
-
-                    <p>{{ __('saveForRetirement.amount_needed') }}</p>
-
+                    <hr>
                     <p>{{ __('saveForRetirement.monthly_payment_formula') }}</p>
                     <h5 class="h6 alert alert-info">
-                        {{ __('saveForRetirement.monthly_payment_equation') }}
+                        {{ __('saveForRetirement.monthly_payment_equation') }} FV<sub>goal</sub> / ((1 + (r /
+                        12))<sup>12n</sup> - 1) / (r / 12)
                     </h5>
                     <ul>
                         <li>{{ __('saveForRetirement.monthly_payment_description') }}</li>
@@ -45,10 +46,11 @@
                         <li>{{ __('saveForRetirement.monthly_payment_interest_rate_description') }}</li>
                         <li>{{ __('saveForRetirement.monthly_payment_months_description') }}</li>
                     </ul>
-
+                    <hr>
                     <p>{{ __('saveForRetirement.yearly_payment') }}</p>
                     <h5 class="h6 alert alert-info">
-                        {{ __('saveForRetirement.yearly_payment_equation') }}
+                        {{ __('saveForRetirement.yearly_payment_equation') }} FV<sub>goal</sub> / ((1 + r)<sup>n</sup> - 1)
+                        / r
                     </h5>
                     <ul>
                         <li>{{ __('saveForRetirement.yearly_payment_description') }}</li>
@@ -63,136 +65,106 @@
 
                 <section class="col-md-12 row">
                     <div class="col-md-6">
-                        <tr>
-                            <td>{{ __('saveForRetirement.your_age_now') }}</td>
-                            <td>
-                                <input type="number" v-model="ageNow" class="form-control mb-3">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>{{ __('saveForRetirement.your_planned_retirement_age') }}</td>
-                            <td>
-                                <input type="number" v-model="retireAge" class="form-control mb-3">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>{{ __('saveForRetirement.amount_needed_at_retirement_age') }}</td>
-                            <td>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
-                                    </div>
-                                    <input type="number" v-model="neededAmount" class="form-control">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>{{ __('saveForRetirement.your_retirement_savings_now') }}</td>
-                            <td>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
-                                    </div>
-                                    <input type="number" class="form-control" v-model="savingNow">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>{{ __('saveForRetirement.average_investment_return') }}</td>
-                            <td>
-                                <div class="input-group mb-3">
-                                    <input type="number" class="form-control" v-model="invReturn">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="basic-addon2">%</span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style="padding-top: 10px;">
-                                <button class="btn btn-primary"
-                                    @click="calculateRetirement">{{ __('saveForRetirement.calculate_button') }}</button>
-                                <input class="btn btn-danger" type="button"
-                                    value="{{ __('saveForRetirement.clear_button') }}" @Click="clearForm">
-                            </td>
-                        </tr>
+                        <h1 class="h3">{{ __('saveForRetirement.calculatorTitle') }}</h1>
 
-                        <div v-if="results" class="mt-3">
-                            <h3>{{ __('saveForRetirement.results') }}</h3>
+                        <label class="h5"
+                            for="initialSavings">{{ __('saveForRetirement.initialSavingsLabel') }}</label>
+                        <small>{{ __('saveForRetirement.initialSavingsExplanation') }}</small>
+                        <br>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="number" min="1" class="form-control" v-model="initialSavings">
+                        </div>
+                        <hr>
 
-                            <!-- Monthly Savings Plan -->
-                            <div class="result-card">
-                                <h4 class="bg-success text-white rounded p-2">
-                                    {{ __('saveForRetirement.monthly_savings_plan') }}
-                                </h4>
-                                <ul class="list-unstyled">
-                                    <li><strong>{{ __('saveForRetirement.amount_to_save_monthly') }}</strong>
-                                        $@{{ results[0].amount }}</li>
-                                    <li><strong>{{ __('saveForRetirement.total_principal') }}</strong>
-                                        $@{{ results[0].principal }}</li>
-                                    <li><strong>{{ __('saveForRetirement.total_interest') }}</strong>
-                                        $@{{ results[0].interest }}</li>
-                                </ul>
+                        <label class="h5"
+                            for="annualInterestRate">{{ __('saveForRetirement.annualInterestRateLabel') }}</label>
+                        <small>@{{ annualInterestRate }}%</small>
+                        <br>
+                        <small>{{ __('saveForRetirement.annualInterestRateExplanation') }}</small>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" v-model="annualInterestRate">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">%</span>
                             </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="h5"
+                                for="numberOfYears">{{ __('saveForRetirement.numberOfYearsLabel') }}</label>
+                            <small>{{ __('saveForRetirement.numberOfYearsExplanation') }}</small>
+                            <input type="number" min="1" class="form-control" v-model="numberOfYears">
+                        </div>
+                        <hr>
+                        <label class="h5"
+                            for="futureValueGoal">{{ __('saveForRetirement.futureValueGoalLabel') }}</label>
+                        <small>{{ __('saveForRetirement.futureValueGoalExplanation') }}</small>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="number" min="1" class="form-control" v-model="futureValueGoal">
+                        </div>
+
+                        <button class="btn btn-primary"
+                            @click="calculateRetirement">{{ __('saveForRetirement.calculateButton') }}</button>
+
+                        <div v-if="futureValue" class="donwload-result ">
                             <hr>
-                            <!-- Yearly Savings Plan -->
-                            <div class="result-card">
-                                <h4 class="bg-success text-white rounded p-2">
-                                    {{ __('saveForRetirement.yearly_savings_plan') }}</h4>
-                                <ul class="list-unstyled">
-                                    <li><strong>{{ __('saveForRetirement.amount_to_save_yearly') }}</strong>
-                                        $@{{ results[1].amount }}
-                                    </li>
-                                    <li><strong>{{ __('saveForRetirement.total_principal') }}</strong>
-                                        $@{{ results[1].principal }}</li>
-                                    <li><strong>{{ __('saveForRetirement.total_interest') }}</strong>
-                                        $@{{ results[1].interest }}</li>
-                                </ul>
-                            </div>
-                            <hr>
-                            <!-- Lump Sum Savings Plan -->
-                            <div class="result-card">
-                                <h4 class="bg-success text-white rounded p-2">
-                                    {{ __('saveForRetirement.lump_sum_savings_plan') }}
-                                </h4>
-                                <ul class="list-unstyled">
-                                    <li><strong>{{ __('saveForRetirement.additional_amount_needed') }}</strong>
-                                        $@{{ results[2].amount }}</li>
-                                    <li><strong>{{ __('saveForRetirement.total_principal') }}</strong>
-                                        $@{{ results[2].principal }}</li>
-                                    <li><strong>{{ __('saveForRetirement.total_interest') }}</strong>
-                                        $@{{ results[2].interest }}</li>
-                                </ul>
-                                <form v-if="results"
-                                    action="{{ route('pdf.saveForRetirement', ['locale' => collect(request()->segments())[0]], true) }}"
-                                    method="GET">
-                                    <input type="hidden" name="results" :value="JSON.stringify(results)">
-                                    <button type="submit"
-                                        class="btn btn-success my-2">{{ __('BudgetPlanner.DownloadPDF') }}</button>
-                                </form>
-                            </div>
+                            <h4 class="bg-success text-white rounded p-2 mt-3">
+                                {{ __('saveForRetirement.resultsTitle') }}
+                            </h4>
+                            <ul class="list-unstyled">
+
+                                <li><strong>{{ __('saveForRetirement.futureValueLabel') }} </strong>
+                                    $@{{ formatNumber(futureValue) }}</li>
+                                <small>{{ __('saveForRetirement.futureValueExplanation') }}</small>
+                                <hr>
+                                <li><strong>{{ __('saveForRetirement.monthlyPaymentLabel') }} </strong>
+                                    $@{{ formatNumber(monthlyPaymentNeeded) }}</li>
+                                <small>{{ __('saveForRetirement.monthlyPaymentExplanation') }}</small>
+                                <hr>
+                                <li><strong>{{ __('saveForRetirement.yearlyPaymentLabel') }} </strong>
+                                    $@{{ formatNumber(yearlyPaymentNeeded) }}</li>
+                                <small>{{ __('saveForRetirement.yearlyPaymentExplanation') }}</small>
+
+                            </ul>
+                            <form action="{{ route('pdf.globalPDF', ['locale' => collect(request()->segments())[0]], true) }}"
+                                method="GET">
+                                <input type="hidden" name="value[0]" value="{{__('saveForRetirement.futureValueLabel')}}">
+                                <input type="hidden" name="value[1]" :value="formatNumber(futureValue)">
+                                <input type="hidden" name="value[2]" value="{{__('saveForRetirement.monthlyPaymentLabel')}}">
+                                <input type="hidden" name="value[3]" :value="formatNumber(monthlyPaymentNeeded)">
+                                <input type="hidden" name="value[4]" value="{{__('saveForRetirement.yearlyPaymentLabel')}}">
+                                <input type="hidden" name="value[5]" :value="formatNumber(yearlyPaymentNeeded)">
+                                <button type="submit" class="btn btn-success my-2">{{ __('BudgetPlanner.DownloadPDF') }}</button>
+                            </form>
+
                         </div>
 
                     </div>
+                </section>
             </div>
-
-
         </div>
-
     </div>
 @endsection
 
+
 @section('scripts')
     <script>
+
         new Vue({
             el: "#app",
             data: {
-                ageNow: 35,
-                retireAge: 67,
-                neededAmount: 600000,
-                savingNow: 30000,
-                invReturn: 6,
-                results: null,
+                initialSavings: 10000,
+                annualInterestRate: 6,
+                numberOfYears: 20,
+                futureValueGoal: 1000000,
+                futureValue: 0,
+                monthlyPaymentNeeded: 0,
+                yearlyPaymentNeeded: 0,
             },
             methods: {
                 formatNumber(number) {
@@ -202,61 +174,19 @@
                     });
                 },
                 calculateRetirement() {
+                    this.annualInterestRateReal = this.annualInterestRate / 100;
 
-                    const yearsToSave = this.retireAge - this.ageNow;
+                    // Calculate future value
+                    this.futureValue = this.initialSavings * Math.pow(1 + this.annualInterestRateReal, this
+                        .numberOfYears);
 
-                    // Calculate the future value of current savings
-                    const futureValue = this.savingNow * Math.pow(1 + this.invReturn / 100, yearsToSave);
+                    // Calculate monthly payment needed (if future value goal is provided)
+                    this.monthlyPaymentNeeded = this.futureValueGoal / ((Math.pow(1 + this.annualInterestRateReal /
+                        12, this.numberOfYears * 12) - 1) / (this.annualInterestRateReal / 12));
 
-                    // Calculate the amount needed to reach the desired savings goal
-                    const amountNeeded = this.neededAmount - futureValue;
-
-                    // Calculate monthly savings plan
-                    const monthlyInterestRate = this.invReturn / 100 / 12;
-                    const months = yearsToSave * 12;
-                    const monthlyPayment = amountNeeded * (monthlyInterestRate / (1 - Math.pow(1 +
-                        monthlyInterestRate, -months)));
-                    const monthlyPrincipal = monthlyPayment * months - amountNeeded;
-                    const monthlyInterest = futureValue - monthlyPrincipal;
-
-                    // Calculate yearly savings plan
-                    const yearlyInterestRate = this.invReturn / 100;
-                    const yearlyPayment = amountNeeded / ((Math.pow(1 + yearlyInterestRate, yearsToSave) - 1) / (
-                        yearlyInterestRate * Math.pow(1 + yearlyInterestRate, yearsToSave)));
-                    const yearlyPrincipal = yearlyPayment * yearsToSave;
-                    const yearlyInterest = futureValue - yearlyPrincipal;
-
-                    // Calculate lump sum savings plan
-                    const lumpSumPrincipal = amountNeeded;
-                    const lumpSumInterest = futureValue - lumpSumPrincipal;
-
-
-                    this.results = [{
-                            amount: this.formatNumber(monthlyPayment),
-                            principal: this.formatNumber(monthlyPrincipal),
-                            interest: this.formatNumber(monthlyInterest),
-                        },
-                        {
-                            amount: this.formatNumber(yearlyPayment),
-                            principal: this.formatNumber(yearlyPrincipal),
-                            interest: this.formatNumber(yearlyInterest),
-                        },
-                        {
-                            amount: this.formatNumber(amountNeeded),
-                            principal: this.formatNumber(lumpSumPrincipal),
-                            interest: this.formatNumber(lumpSumInterest),
-                        },
-                    ];
+                    this.yearlyPaymentNeeded = this.futureValueGoal / ((Math.pow(1 + this.annualInterestRateReal,
+                        this.numberOfYears) - 1) / this.annualInterestRateReal);
                 },
-                clearForm() {
-                    this.ageNow = '';
-                    this.retireAge = '';
-                    this.neededAmount = '';
-                    this.savingNow = '';
-                    this.invReturn = '';
-                    this.results = null;
-                },
-
             },
         });
     </script>

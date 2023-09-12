@@ -75,4 +75,13 @@ class PdfController extends Controller
         return view('pdf.saveForRetirement',$data);
     }
 
+
+
+    public function globalPDF(Request $request){
+
+        $data = $request->all();
+
+        return view('pdf.GlobalPDF',$data);
+    }
+
 }

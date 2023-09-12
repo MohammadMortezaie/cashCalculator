@@ -36,6 +36,7 @@ $router->group(['prefix' => '{locale}'], function () use ($router) {
 
     $router->group(['prefix' => 'pdf'], function () use ($router) {
 
+        $router->get('/pdf-free', [ 'as' => 'pdf.globalPDF', 'uses' => 'PdfController@globalPDF']);
         $router->get('/budget-planner', [ 'as' => 'pdf.budget-planner', 'uses' => 'PdfController@budgetPlanner']);
         $router->get('/money-calculator', [ 'as' => 'pdf.money-calculator', 'uses' => 'PdfController@moneyCalculator']);
         $router->get('/50-30-20', [ 'as' => 'pdf.budget503020', 'uses' => 'PdfController@budget503020']);
