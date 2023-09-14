@@ -5,6 +5,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::to(env('APP_URL') . '/img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::to(env('APP_URL') . '/img/favicon-16x16.png') }}">
+    <link rel="icon" type="image/x-icon"  href="{{ URL::to(env('APP_URL') . '/img/favicon.ico') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ URL::to(env('APP_URL') . '/css/bootstrap.min.css') }}">

@@ -24,7 +24,6 @@ class LanguageMiddleware
         }
         app()->setLocale($lang);
 
-
         return $next($request);
     }
 }

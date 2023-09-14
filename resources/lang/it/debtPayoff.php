@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'seoTitle' => "Calcolatrice gratuita per il pagamento dei debiti",
+    'seoDescription' => "Diventa senza debiti ora: prova la nostra calcolatrice gratuita per il pagamento dei debiti. Scopri il tuo miglior piano di pagamento, che sia mensile, quindicinale o settimanale, per saldare il debito più rapidamente. Stima il tempo necessario e ottieni un rapporto PDF gratuito. È tutto gratuito: inizia il tuo percorso verso la libertà finanziaria oggi stesso!",
+    'h1' => "Calcolatrice di Pagamento dei Debiti",
+    'free_debt_calculator_title' => "Calcolatrice gratuita per il pagamento dei debiti",
+    'free_debt_calculator_description' => "Calcoliamo la quantità del tuo debito che dovresti pagare ogni mese, ogni settimana o ogni due settimane, insieme al tempo necessario. Generiamo anche un PDF gratuito per te.",
+    'total_debt_amount' => "Importo Totale del Debito",
+    'total_debt_amount_description' => "Questo si riferisce al saldo totale in sospeso o all'importo principale del tuo debito. Include l'importo iniziale che hai preso in prestito o che devi, come un debito con carta di credito, un prestito o un mutuo. Conoscere l'importo totale del debito è fondamentale per creare una strategia efficace di pagamento dei debiti.",
+    'interest_rate' => "Tasso di Interesse",
+    'interest_rate_description' => "Il tasso di interesse rappresenta il costo di prendere in prestito denaro o il rendimento dell'investimento nel prestare denaro. Di solito è espresso come percentuale e determina la quantità di interessi che ti verranno addebitati sul debito. Un tasso di interesse più alto significa che pagherai più interessi nel tempo, quindi è essenziale comprenderlo e considerarlo nella gestione del tuo debito.",
+    'payment_frequency' => "Frequenza di Pagamento",
+    'payment_frequency_description' => "La frequenza di pagamento si riferisce a quanto spesso effettui i pagamenti del debito. Può essere mensile, quindicinale (ogni due settimane) o settimanale. Scegliere la frequenza di pagamento corretta è importante perché influisce sulla rapidità con cui saldi il tuo debito e sulla quantità di interessi che paghi. Ad esempio, effettuare pagamenti più frequenti può aiutarti a saldare il debito più rapidamente e a ridurre i costi totali degli interessi.",
+    'debt_calculator_title' => "Calcolatrice di Pagamento dei Debiti",
+    'add_debt_button' => "Aggiungi Debito",
+    'monthly' => "Mensile",
+    'bi_weekly' => "Quindicinale",
+    'weekly' => "Settimanale",
+    'payment' => "Pagamento",
+    'debt_number' => "Debito #",
+    'payment_amount' => "Importo del Pagamento",
+    'frequency_needed_to_pay_off' => "Frequenza Necessaria per Saldare",
+    'total_paid' => "Totale Pagato",
+    'debt_details_title' => "Debito #",
+    'download_pdf_button' => "Scarica il Rapporto in PDF",
+];

@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'seoTitle' => "Calculadora gratuita para pagar deudas",
+    'seoDescription' => "¡Libérate de las deudas ahora! Prueba nuestra calculadora gratuita para pagar deudas. Descubre cuál es el mejor plan de pago, ya sea mensual, quincenal o semanal, para saldar tus deudas más rápido. Estima el tiempo necesario para pagarlas y obtén un informe en PDF gratuito. Todo es gratis, ¡comienza tu camino hacia la libertad financiera hoy mismo!",
+    'h1' => "Calculadora de Pago de Deudas",
+    'free_debt_calculator_title' => "Calculadora gratuita para pagar deudas",
+    'free_debt_calculator_description' => "Calculamos cuánto debes pagar cada mes, semana o quincena, y cuánto tiempo llevará. También generamos un PDF gratuito para ti.",
+    'total_debt_amount' => "Cantidad Total de Deuda",
+    'total_debt_amount_description' => "Esto se refiere al saldo pendiente total o al monto principal de tu deuda. Incluye la cantidad inicial que pediste prestada u debes, como deudas de tarjetas de crédito, préstamos o una hipoteca. Conocer la cantidad total de tu deuda es crucial para crear una estrategia efectiva para pagarla.",
+    'interest_rate' => "Tasa de Interés",
+    'interest_rate_description' => "La tasa de interés representa el costo de tomar prestado dinero o el rendimiento de la inversión al prestar dinero. Por lo general, se expresa como un porcentaje y determina cuánto interés se te cobrará en tu deuda. Una tasa de interés más alta significa que pagarás más intereses con el tiempo, por lo que es esencial entenderlo y tenerlo en cuenta al gestionar tu deuda.",
+    'payment_frequency' => "Frecuencia de Pago",
+    'payment_frequency_description' => "La frecuencia de pago se refiere a cuánto a menudo haces pagos de deuda. Puede ser mensual, quincenal (cada dos semanas) o semanal. Elegir la frecuencia de pago adecuada es importante porque afecta la rapidez con que pagas tu deuda y cuánto pagas en intereses. Por ejemplo, hacer pagos más frecuentes puede ayudarte a saldar tu deuda más rápido y reducir los costos totales de intereses.",
+    'debt_calculator_title' => "Calculadora de Pago de Deudas",
+    'add_debt_button' => "Agregar Deuda",
+    'monthly' => "Mensual",
+    'bi_weekly' => "Quincenal",
+    'weekly' => "Semanal",
+    'payment' => "Pago",
+    'debt_number' => "Deuda #",
+    'payment_amount' => "Monto del Pago",
+    'frequency_needed_to_pay_off' => "Frecuencia Necesaria para Pagar",
+    'total_paid' => "Total Pagado",
+    'debt_details_title' => "Deuda #",
+    'download_pdf_button' => "Descargar Informe en PDF",
+];

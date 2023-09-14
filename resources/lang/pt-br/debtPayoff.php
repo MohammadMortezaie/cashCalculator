@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'seoTitle' => "Calculadora Gratuita de Pagamento de Dívidas",
+    'seoDescription' => "Fique livre das dívidas agora: experimente nossa Calculadora Gratuita de Pagamento de Dívidas. Descubra o melhor plano de pagamento, seja mensal, quinzenal ou semanal, para quitar suas dívidas mais rapidamente. Estime o tempo necessário e obtenha um relatório em PDF gratuito. É tudo gratuito - comece hoje mesmo sua jornada rumo à liberdade financeira!",
+    'h1' => "Calculadora de Pagamento de Dívidas",
+    'free_debt_calculator_title' => "Calculadora Gratuita de Pagamento de Dívidas",
+    'free_debt_calculator_description' => "Nós calculamos quanto você deve pagar de sua dívida mensalmente, semanalmente ou a cada duas semanas, e quanto tempo levará. Também geramos um PDF gratuito para você.",
+    'total_debt_amount' => "Valor Total da Dívida",
+    'total_debt_amount_description' => "Isso se refere ao saldo pendente total ou ao valor principal de sua dívida. Inclui o valor inicial que você pegou emprestado ou deve, como dívida de cartão de crédito, empréstimo ou hipoteca. Saber o valor total da dívida é crucial para criar uma estratégia eficaz de pagamento da dívida.",
+    'interest_rate' => "Taxa de Juros",
+    'interest_rate_description' => "A taxa de juros representa o custo de pegar emprestado dinheiro ou o retorno do investimento ao emprestar dinheiro. Geralmente, é expressa como uma porcentagem e determina quanto de juros você pagará em sua dívida. Uma taxa de juros mais alta significa que você pagará mais juros ao longo do tempo, portanto, é essencial entender e considerar isso ao gerenciar sua dívida.",
+    'payment_frequency' => "Frequência de Pagamento",
+    'payment_frequency_description' => "A frequência de pagamento se refere a com que frequência você faz os pagamentos de sua dívida. Pode ser mensal, quinzenal (a cada duas semanas) ou semanal. Escolher a frequência de pagamento certa é importante porque afeta o quão rapidamente você quita sua dívida e quanto você paga de juros. Por exemplo, fazer pagamentos mais frequentes pode ajudar a quitar a dívida mais rapidamente e reduzir os custos totais de juros.",
+    'debt_calculator_title' => "Calculadora de Pagamento de Dívidas",
+    'add_debt_button' => "Adicionar Dívida",
+    'monthly' => "Mensal",
+    'bi_weekly' => "Quinzenal",
+    'weekly' => "Semanal",
+    'payment' => "Pagamento",
+    'debt_number' => "Dívida #",
+    'payment_amount' => "Valor do Pagamento",
+    'frequency_needed_to_pay_off' => "Frequência Necessária para Liquidar",
+    'total_paid' => "Total Pago",
+    'debt_details_title' => "Dívida #",
+    'download_pdf_button' => "Baixar Relatório em PDF",
+];

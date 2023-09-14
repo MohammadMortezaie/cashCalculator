@@ -17,39 +17,27 @@ $router->get('/', function () {
     return redirect('/en');
 });
 
-$router->get('/budget-planner', function () {
-    return redirect('/en/budget-planner');
-});
-$router->get('/money-calculator', function () {
-    return redirect('/en/money-calculator');
-});
-$router->get('/50-30-20', function () {
-    return redirect('/en/50-30-20');
-});
-$router->get('/retirement-savings-calculator', function () {
-    return redirect('/en/50-30-20');
-});
-
-
-
 $router->group(['prefix' => '{locale}'], function () use ($router) {
 
-    $router->group(['prefix' => 'pdf'], function () use ($router) {
+    $router->get('/', ['as' => 'home', 'uses' => 'HomeController@home']);
+    $router->get('/privacy-policy', ['as' => 'home.privacypolicy', 'uses' => 'HomeController@privacyPolicy']);
 
-        $router->get('/pdf-free', [ 'as' => 'pdf.globalPDF', 'uses' => 'PdfController@globalPDF']);
-        $router->get('/budget-planner', [ 'as' => 'pdf.budget-planner', 'uses' => 'PdfController@budgetPlanner']);
-        $router->get('/money-calculator', [ 'as' => 'pdf.money-calculator', 'uses' => 'PdfController@moneyCalculator']);
-        $router->get('/50-30-20', [ 'as' => 'pdf.budget503020', 'uses' => 'PdfController@budget503020']);
-        $router->get('/retirement-savings-calculator', [ 'as' => 'pdf.saveForRetirement', 'uses' => 'PdfController@saveForRetirement']);
 
-    });
 
-    $router->get('/', [ 'as' => 'home', 'uses' => 'HomeController@home']);
-    $router->get('/privacy-policy', [ 'as' => 'home.privacypolicy', 'uses' => 'HomeController@privacyPolicy']);
+    $router->get('/budget-planner', ['as' => 'home.budgetPlanner', 'uses' => 'HomeController@budgetPlanner']);
+    $router->get('/money-calculator', ['as' => 'home.moneyCalculator', 'uses' => 'HomeController@moneyCalculator']);
+    $router->get('/50-30-20', ['as' => 'home.503020', 'uses' => 'HomeController@budget503020']);
+    $router->get('/retirement-savings-calculator', ['as' => 'home.saveForRetirement', 'uses' => 'HomeController@saveForRetirement']);
+    $router->get('/debt-payoff-calculator', ['as' => 'home.debtPayoff', 'uses' => 'HomeController@debtPayoff']);
 
-    $router->get('/budget-planner', [ 'as' => 'home.budgetPlanner', 'uses' => 'HomeController@budgetPlanner'] );
-    $router->get('/money-calculator',  [ 'as' => 'home.moneyCalculator', 'uses' => 'HomeController@moneyCalculator']);
-    $router->get('/50-30-20', [ 'as' => 'home.503020', 'uses' => 'HomeController@budget503020'] );
-    $router->get('/retirement-savings-calculator', [ 'as' => 'home.saveForRetirement', 'uses' => 'HomeController@saveForRetirement'] );
+
+
+    //pdf
+    $router->get('/pdf-free', ['as' => 'pdf.globalPDF', 'uses' => 'PdfController@globalPDF']);
+    $router->get('/pdf-budget-planner', ['as' => 'pdf.budget-planner', 'uses' => 'PdfController@budgetPlanner']);
+    $router->get('/pdf-money-calculator', ['as' => 'pdf.money-calculator', 'uses' => 'PdfController@moneyCalculator']);
+    $router->get('/pdf-50-30-20', ['as' => 'pdf.budget503020', 'uses' => 'PdfController@budget503020']);
+    $router->get('/pdf-retirement-savings-calculator', ['as' => 'pdf.saveForRetirement', 'uses' => 'PdfController@saveForRetirement']);
+
 
 });

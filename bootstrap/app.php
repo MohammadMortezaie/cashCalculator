@@ -75,7 +75,8 @@ $app->configure('app');
 */
 
 $app->middleware([
-    App\Http\Middleware\LanguageMiddleware::class
+    App\Http\Middleware\LanguageMiddleware::class,
+    App\Http\Middleware\LocaleRedirectMiddleware::class,
 ]);
 
 // $app->routeMiddleware([

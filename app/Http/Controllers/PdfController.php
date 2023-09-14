@@ -80,7 +80,6 @@ class PdfController extends Controller
     public function globalPDF(Request $request){
 
         $data = $request->all();
-
         return view('pdf.GlobalPDF',$data);
     }
 

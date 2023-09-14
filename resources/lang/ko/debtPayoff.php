@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'seoTitle' => "무료 부채 상환 계산기",
+    'seoDescription' => "지금 무료 부채 상환 계산기를 이용하여 빠르게 부채를 갚아보세요. 월별, 매주 또는 격주로 상환하는 가장 효과적인 상환 계획을 확인하고, 예상 상환 기간과 무료 PDF 보고서를 받아보세요. 모두 무료로 이용 가능합니다. 금융 자유를 향한 여정을 오늘부터 시작하세요!",
+    'h1' => "부채 상환 계산기",
+    'free_debt_calculator_title' => "무료 부채 상환 계산기",
+    'free_debt_calculator_description' => "우리는 매월, 매주 또는 격주로 지불해야 할 부채 금액과 소요 시간을 계산합니다. 무료 PDF도 제공합니다.",
+    'total_debt_amount' => "총 부채 금액",
+    'total_debt_amount_description' => "이것은 당신의 부채의 총 미지급 잔액 또는 원금 금액을 나타냅니다. 이것은 신용 카드 부채, 대출 또는 모기지와 같이 처음에 빌린 또는 빚진 금액을 포함합니다. 적절한 부채 상환 전략을 만들기 위해 총 부채 금액을 알아야 합니다.",
+    'interest_rate' => "이자율",
+    'interest_rate_description' => "이자율은 돈을 빌리는 비용이나 돈을 빌려주는 투자의 수익을 나타냅니다. 보통 백분율로 표시되며 부채에 대해 부과되는 이자 금액을 결정합니다. 높은 이자율은 시간이 지남에 따라 더 많은 이자를 지불하게 만듭니다. 따라서 부채 관리 시 이것을 이해하고 고려하는 것이 중요합니다.",
+    'payment_frequency' => "지불 빈도",
+    'payment_frequency_description' => "지불 빈도는 얼마나 자주 부채 지불을 하는지를 나타냅니다. 월간, 격주(매주 두 번) 또는 주간일 수 있습니다. 적절한 지불 빈도를 선택하는 것은 부채를 얼마나 빨리 상환하고 이자를 얼마나 지불하느냐에 영향을 미칩니다. 예를 들어 더 자주 지불하면 부채를 빨리 갚고 총 이자 비용을 줄일 수 있습니다.",
+    'debt_calculator_title' => "부채 상환 계산기",
+    'add_debt_button' => "부채 추가",
+    'monthly' => "월간",
+    'bi_weekly' => "격주",
+    'weekly' => "주간",
+    'payment' => "지불",
+    'debt_number' => "부채 번호",
+    'payment_amount' => "지불 금액",
+    'frequency_needed_to_pay_off' => "상환 필요 빈도",
+    'total_paid' => "총 지불액",
+    'debt_details_title' => "부채 번호",
+    'download_pdf_button' => "PDF 보고서 다운로드",
+];

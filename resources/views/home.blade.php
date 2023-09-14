@@ -32,16 +32,20 @@
                         @endphp
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><a
-                                    href="{{ route('home.budgetPlanner',['locale' => $lang ], true) }}">{{ __('home.BudgetPlanner') }}</a>
+                                    href="{{ route('home.budgetPlanner', ['locale' => $lang], true) }}">{{ __('home.BudgetPlanner') }}</a>
                             </li>
                             <li class="list-group-item"><a
-                                    href="{{ route('home.moneyCalculator',['locale' => $lang ], true) }}">{{ __('home.moneyCalculator') }}</a>
+                                    href="{{ route('home.moneyCalculator', ['locale' => $lang], true) }}">{{ __('home.moneyCalculator') }}</a>
                             </li>
                             <li class="list-group-item"><a
-                                    href="{{ route('home.503020',['locale' => $lang ], true) }}">{{ __('503020.h1') }}</a>
+                                    href="{{ route('home.503020', ['locale' => $lang], true) }}">{{ __('503020.h1') }}</a>
                             </li>
                             <li class="list-group-item"><a
-                                href="{{ route('home.saveForRetirement',['locale' => $lang ], true) }}">{{ __('saveForRetirement.seoTitle') }}</a>
+                                    href="{{ route('home.saveForRetirement', ['locale' => $lang], true) }}">{{ __('saveForRetirement.seoTitle') }}</a>
+                            </li>
+
+                            <li class="list-group-item"><a
+                                href="{{ route('home.debtPayoff', ['locale' => $lang], true) }}">{{ __('debtPayoff.h1') }}</a>
                         </li>
                         </ul>
 

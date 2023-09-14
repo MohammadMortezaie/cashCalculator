@@ -50,6 +50,23 @@
         .total-amount {
             font-size: 25px;
         }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
     </style>
 
     <!-- html2pdf CDN link -->
@@ -65,11 +82,43 @@
     </div>
     <div class="content">
         <div class="section">
-            @foreach ($value as $item)
-                <p style="margin: 10px 1px">{{ $item }}</p>
-            @endforeach
+            @isset($value)
+                @foreach ($value as $item)
+                    <p style="margin: 10px 1px">{{ $item }}</p>
+                @endforeach
+            @endisset
         </div>
 
+        <div>
+
+            @isset($header)
+                <table>
+                    <tr>
+                        @foreach ($header as $item)
+                            <th>{{ $item }}</th>
+                        @endforeach
+                    </tr>
+
+
+                    @isset($table)
+                        @foreach (json_decode($table[0]) as $row)
+                            <tr>
+                                @foreach ($row as $final)
+                                    <td>
+                                        {{ $final }}
+                                    </td>
+                                @endforeach
+                            </tr>
+                        @endforeach
+                        <tr>
+
+                        </tr>
+                    @endisset
+
+
+                </table>
+            @endisset
+        </div>
 
     </div>
     <script>
