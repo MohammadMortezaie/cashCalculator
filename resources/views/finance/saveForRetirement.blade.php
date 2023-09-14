@@ -95,7 +95,7 @@
                         <div class="form-group">
                             <label class="h5"
                                 for="numberOfYears">{{ __('saveForRetirement.numberOfYearsLabel') }}</label>
-                                <small>@{{ formatNumber(numberOfYears) }}</small>  <br>
+                                <small>@{{ numberOfYears }}</small>  <br>
                             <small>{{ __('saveForRetirement.numberOfYearsExplanation') }}</small>
                             <input type="number" min="1" class="form-control" v-model="numberOfYears">
                         </div>

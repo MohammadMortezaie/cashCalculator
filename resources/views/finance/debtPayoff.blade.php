@@ -121,14 +121,14 @@
                             <tbody>
                                 <tr v-for="(debt, index) in debts" :key="index">
                                     <td>@{{ index + 1 }}</td>
-                                    <td>@{{ debt.totalDebt }}</td>
+                                    <td>@{{ formatNumber(debt.totalDebt) }}</td>
                                     <td>@{{ debt.interestRate }}</td>
                                     <td>@{{ formatNumber(debt.monthlyPayment) }}</td>
                                     <td v-if="debt.paymentFrequency == 1">{{ __('debtPayoff.monthly') }}</td>
                                     <td v-if="debt.paymentFrequency == 2">{{ __('debtPayoff.bi_weekly') }}</td>
                                     <td v-if="debt.paymentFrequency == 3">{{ __('debtPayoff.weekly') }}</td>
                                     <td>@{{ debt.payoffDetails.monthsToPayoff }}</td>
-                                    <td>@{{ debt.payoffDetails.totalPaid }}</td>
+                                    <td>@{{ formatNumber(debt.payoffDetails.totalPaid) }}</td>
                                 </tr>
                             </tbody>
                         </table>

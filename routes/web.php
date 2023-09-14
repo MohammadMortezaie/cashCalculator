@@ -29,6 +29,7 @@ $router->group(['prefix' => '{locale}'], function () use ($router) {
     $router->get('/50-30-20', ['as' => 'home.503020', 'uses' => 'HomeController@budget503020']);
     $router->get('/retirement-savings-calculator', ['as' => 'home.saveForRetirement', 'uses' => 'HomeController@saveForRetirement']);
     $router->get('/debt-payoff-calculator', ['as' => 'home.debtPayoff', 'uses' => 'HomeController@debtPayoff']);
+    $router->get('/investment-calculator', ['as' => 'home.investmentCalculator', 'uses' => 'HomeController@investmentCalculator']);
 
 
 

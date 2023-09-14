@@ -46,7 +46,12 @@
 
                             <li class="list-group-item"><a
                                 href="{{ route('home.debtPayoff', ['locale' => $lang], true) }}">{{ __('debtPayoff.h1') }}</a>
-                        </li>
+                            </li>
+
+                            <li class="list-group-item"><a
+                                href="{{ route('home.investmentCalculator', ['locale' => $lang], true) }}">{{ __('investmentCalculator.h1') }}</a>
+                            </li>
+
                         </ul>
 
                     </div>

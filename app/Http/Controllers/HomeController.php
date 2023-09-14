@@ -53,7 +53,12 @@ class HomeController extends Controller
 
     public function debtPayoff(Request $request)
     {
-        return $this->setSeoAndOpenGraph('saveForRetirement.seoTitle', 'saveForRetirement.seoDescription', 'finance.debtPayoff');
+        return $this->setSeoAndOpenGraph('debtPayoff.seoTitle', 'debtPayoff.seoDescription', 'finance.debtPayoff');
+    }
+
+    public function investmentCalculator(Request $request)
+    {
+        return $this->setSeoAndOpenGraph('investmentCalculator.seoTitle', 'investmentCalculator.seoDescription', 'finance.investmentCalculator');
     }
 
     public function privacyPolicy(Request $request)
