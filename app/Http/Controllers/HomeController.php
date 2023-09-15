@@ -61,6 +61,10 @@ class HomeController extends Controller
         return $this->setSeoAndOpenGraph('investmentCalculator.seoTitle', 'investmentCalculator.seoDescription', 'finance.investmentCalculator');
     }
 
+    public function compoundInterestCalculator(Request $request)
+    {
+        return $this->setSeoAndOpenGraph('compound.seoTitle', 'compound.seoDescription', 'finance.compoundInterestCalculator');
+    }
     public function privacyPolicy(Request $request)
     {
         return view('privacyPolicy');

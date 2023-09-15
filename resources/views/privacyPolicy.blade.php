@@ -17,6 +17,7 @@
     <div class="container">
         <div class="mt-3">
             <h3>{{ __('home.privacy_policy_title') }}</h3>
+            <p><a href="https://moemortezaei.netlify.app/" target="_blank">Moe Mortezaei</a></p>
             <p>{{ __('home.privacy_policy_intro') }}</p>
 
             <h3>{{ __('home.information_collection_and_use_title') }}</h3>

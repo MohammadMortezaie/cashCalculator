@@ -49,7 +49,11 @@
                             </li>
 
                             <li class="list-group-item"><a
-                                href="{{ route('home.investmentCalculator', ['locale' => $lang], true) }}">{{ __('investmentCalculator.h1') }}</a>
+                                href="{{ route('home.investmentCalculator', ['locale' => $lang], true) }}">{{ __('compound.h1-RetirementSavings') }}</a>
+                            </li>
+
+                            <li class="list-group-item"><a
+                                href="{{ route('home.compoundInterestCalculator', ['locale' => $lang], true) }}">{{ __('compound.h1') }}</a>
                             </li>
 
                         </ul>
