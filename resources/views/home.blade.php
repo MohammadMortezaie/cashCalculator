@@ -41,7 +41,7 @@
                                     href="{{ route('home.503020', ['locale' => $lang], true) }}">{{ __('503020.h1') }}</a>
                             </li>
                             <li class="list-group-item"><a
-                                    href="{{ route('home.saveForRetirement', ['locale' => $lang], true) }}">{{ __('saveForRetirement.seoTitle') }}</a>
+                                    href="{{ route('home.saveForRetirement', ['locale' => $lang], true) }}">{{ __('compound.h1-RetirementSavings') }}</a>
                             </li>
 
                             <li class="list-group-item"><a
@@ -49,7 +49,7 @@
                             </li>
 
                             <li class="list-group-item"><a
-                                href="{{ route('home.investmentCalculator', ['locale' => $lang], true) }}">{{ __('compound.h1-RetirementSavings') }}</a>
+                                href="{{ route('home.investmentCalculator', ['locale' => $lang], true) }}">{{ __('investmentCalculator.h1') }}</a>
                             </li>
 
                             <li class="list-group-item"><a
