@@ -36,7 +36,7 @@
                                 <h5>{{ __('percentageCalculator.f1-1') }} @{{ percentageOfNumber1 }}%
                                     {{ __('percentageCalculator.f1-2') }} @{{ formatNumber(percentageOfNumber2) }} ?</h5>
                                 <p class="h5 text-success" v-if="percentageOfResult">{{ __('percentageCalculator.result') }}:
-                                    <span class="h3">@{{ percentageOfResult }}</span></p>
+                                    <span class="h3">@{{ formatNumber(percentageOfResult) }}</span></p>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">{{ __('percentageCalculator.f1-1') }}</span>
