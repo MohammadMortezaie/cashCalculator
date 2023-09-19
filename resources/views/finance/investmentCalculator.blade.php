@@ -176,27 +176,27 @@
                     this.futureValue = this.calculateFutureValue();
                 },
                 calculateInflationEffect() {
-                    const years = this.endYear - this.startYear + 1;
+                    const years = Number(this.endYear) - Number(this.startYear) + 1;
                     const initialInvestment = parseFloat(this.initialInvestment);
                     const annualInflationRate = parseFloat(this.annualInflationRate) / 100;
-                    return (initialInvestment * (Math.pow(1 + annualInflationRate, years) - 1)).toFixed(2);
+                    return (Number(initialInvestment) * (Math.pow(1 + annualInflationRate, years) - 1)).toFixed(2);
                 },
                 calculateTotalInterestEarned() {
-                    const years = this.endYear - this.startYear + 1;
+                    const years = Number(this.endYear) - Number(this.startYear) + 1;
                     const initialInvestment = parseFloat(this.initialInvestment);
                     const annualInterestRate = parseFloat(this.annualInterestRate) / 100;
-                    return (initialInvestment * (Math.pow(1 + annualInterestRate, years) - 1)).toFixed(2);
+                    return (Number(initialInvestment) * (Math.pow(1 + annualInterestRate, years) - 1)).toFixed(2);
                 },
                 calculateInterestAfterInflation() {
                     const inflationEffect = parseFloat(this.inflationEffect);
                     const totalInterestEarned = parseFloat(this.totalInterestEarned);
-                    return (totalInterestEarned - inflationEffect).toFixed(2);
+                    return (Number(totalInterestEarned) - inflationEffect).toFixed(2);
                 },
                 calculateFutureValue() {
-                    const years = this.endYear - this.startYear + 1;
+                    const years = Number(this.endYear) - Number(this.startYear) + 1;
                     const initialInvestment = parseFloat(this.initialInvestment);
                     const annualInterestRate = parseFloat(this.annualInterestRate) / 100;
-                    return (initialInvestment * Math.pow(1 + annualInterestRate, years)).toFixed(2);
+                    return (Number(initialInvestment) * Math.pow(1 + annualInterestRate, years)).toFixed(2);
                 },
             },
 

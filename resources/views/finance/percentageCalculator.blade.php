@@ -36,7 +36,8 @@
                                 <h5>{{ __('percentageCalculator.f1-1') }} @{{ percentageOfNumber1 }}%
                                     {{ __('percentageCalculator.f1-2') }} @{{ formatNumber(percentageOfNumber2) }} ?</h5>
                                 <p class="h5 text-success" v-if="percentageOfResult">{{ __('percentageCalculator.result') }}:
-                                    <span class="h3">@{{ formatNumber(percentageOfResult) }}</span></p>
+                                    <span class="h3">@{{ formatNumber(percentageOfResult) }}</span>
+                                </p>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">{{ __('percentageCalculator.f1-1') }}</span>
@@ -71,7 +72,8 @@
                                 <h5>@{{ formatNumber(percentOfNumber1) }} {{ __('percentageCalculator.f2-1') }} @{{ formatNumber(percentOfNumber2) }} ?
                                 </h5>
                                 <p class="h5 text-success" v-if="percentOfResult">{{ __('percentageCalculator.result') }}:
-                                    <span class="h3">@{{ percentOfResult }}</span></p>
+                                    <span class="h3">@{{ percentOfResult }}</span>
+                                </p>
 
                                 <div class="input-group">
                                     <input type="number" class="form-control" v-model="percentOfNumber1">
@@ -90,7 +92,8 @@
                                     <form v-if="percentOfResult"
                                         action="{{ route('pdf.globalPDF', ['locale' => collect(request()->segments())[0]], true) }}"
                                         method="GET" class="ml-2">
-                                        <input type="hidden" name="value[0]" :value="` ${percentOfNumber1} {{ __('percentageCalculator.f2-1') }} ${percentOfNumber2} ?`">
+                                        <input type="hidden" name="value[0]"
+                                            :value="` ${percentOfNumber1} {{ __('percentageCalculator.f2-1') }} ${percentOfNumber2} ?`">
                                         <input type="hidden" name="value[1]" :value="percentOfResult">
                                         <button type="submit"
                                             class="btn btn-success mt-2 ">{{ __('investmentCalculator.download_pdf_button') }}</button>
@@ -127,7 +130,8 @@
                                     <form v-if="percentageChangeResult"
                                         action="{{ route('pdf.globalPDF', ['locale' => collect(request()->segments())[0]], true) }}"
                                         method="GET" class="ml-2">
-                                        <input type="hidden" name="value[0]" :value="`{{ __('percentageCalculator.f3-1') }} ${percentageChangeNumber1} {{ __('percentageCalculator.to') }} ${percentageChangeNumber2} ?`">
+                                        <input type="hidden" name="value[0]"
+                                            :value="`{{ __('percentageCalculator.f3-1') }} ${percentageChangeNumber1} {{ __('percentageCalculator.to') }} ${percentageChangeNumber2} ?`">
                                         <input type="hidden" name="value[1]" :value="percentageChangeResult">
                                         <button type="submit"
                                             class="btn btn-success mt-2 ">{{ __('investmentCalculator.download_pdf_button') }}</button>
@@ -136,7 +140,10 @@
 
                             </div>
 
+
                         </div>
+
+
 
                     </div>
                 </section>
@@ -159,6 +166,10 @@
                 percentageOfResult: "",
                 percentOfResult: "",
                 percentageChangeResult: "",
+
+                v1: '',
+                v2: '',
+                result: null
             },
 
             methods: {
@@ -184,7 +195,7 @@
                     const number2 = parseFloat(this.percentOfNumber2);
 
                     if (!isNaN(percent) && !isNaN(number2)) {
-                        const result = (percent / number2) * 100;
+                        const result = (number(percent) / number2) * 100;
                         this.percentOfResult = result.toFixed(2);
                     } else {
                         this.percentOfResult = "Please enter valid numbers.";
@@ -195,12 +206,14 @@
                     const finalNumber = parseFloat(this.percentageChangeNumber2);
 
                     if (!isNaN(initialNumber) && !isNaN(finalNumber)) {
-                        const percentChange = (finalNumber / Math.abs(initialNumber)) * 100;
+                        const mines = (finalNumber - initialNumber);
+                        const percentChange = (mines / Math.abs(initialNumber)) * 100;
                         this.percentageChangeResult = percentChange.toFixed(2);
                     } else {
                         this.percentageChangeResult = "Please enter valid numbers.";
                     }
                 },
+
             },
 
         });
