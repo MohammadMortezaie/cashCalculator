@@ -30,7 +30,7 @@ return [
                                 develops new calculators to meet your evolving needs. CashCalculator.net aims to be your
                                 trusted
                                 go-to hub whenever you require precise and efficient calculations.",
-    'desc-2' => "We firmly believe in the power of free knowledge. That's why all our tools and services come
+    'desc-2' => "We firmly believe in the power of free knowledge. That is why all our tools and services come
                                 at
                                 absolutely no cost, and we don't require any registration. You can visit our site, select
                                 the

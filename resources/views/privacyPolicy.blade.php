@@ -1,16 +1,7 @@
 @extends('main')
 
 @section('head')
-    <?php
-    $seotools = app('seotools');
-    $metatags = app('seotools.metatags');
-    $twitter = app('seotools.twitter');
-    $opengraph = app('seotools.opengraph');
-    $jsonld = app('seotools.json-ld');
-    $jsonldMulti = app('seotools.json-ld-multi');
-
-    echo app('seotools')->generate();
-    ?>
+<META NAME="robots" CONTENT="noindex,nofollow">
 @endsection
 
 @section('content')

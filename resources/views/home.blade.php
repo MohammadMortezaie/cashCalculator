@@ -34,6 +34,11 @@
                             <li class="list-group-item"><a
                                     href="{{ route('home.budgetPlanner', ['locale' => $lang], true) }}">{{ __('home.BudgetPlanner') }}</a>
                             </li>
+
+                            <li class="list-group-item"><a
+                                href="{{ route('home.percentageCalculator', ['locale' => $lang], true) }}">{{ __('percentageCalculator.h1') }}</a>
+                            </li>
+
                             <li class="list-group-item"><a
                                     href="{{ route('home.moneyCalculator', ['locale' => $lang], true) }}">{{ __('home.moneyCalculator') }}</a>
                             </li>
@@ -59,6 +64,7 @@
                         </ul>
 
                     </div>
+
                     <hr>
                     <div class="row">
                         <div class="col-md-6">

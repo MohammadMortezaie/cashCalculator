@@ -65,6 +65,11 @@ class HomeController extends Controller
     {
         return $this->setSeoAndOpenGraph('compound.seoTitle', 'compound.seoDescription', 'finance.compoundInterestCalculator');
     }
+    public function percentageCalculator(Request $request)
+    {
+        return $this->setSeoAndOpenGraph('percentageCalculator.seoTitle', 'percentageCalculator.seoDescription', 'finance.percentageCalculator');
+    }
+
     public function privacyPolicy(Request $request)
     {
         return view('privacyPolicy');
