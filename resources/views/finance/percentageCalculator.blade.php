@@ -139,8 +139,6 @@
                                 </div>
 
                             </div>
-
-
                         </div>
 
 
@@ -167,9 +165,6 @@
                 percentOfResult: "",
                 percentageChangeResult: "",
 
-                v1: '',
-                v2: '',
-                result: null
             },
 
             methods: {
@@ -195,7 +190,7 @@
                     const number2 = parseFloat(this.percentOfNumber2);
 
                     if (!isNaN(percent) && !isNaN(number2)) {
-                        const result = (number(percent) / number2) * 100;
+                        const result = (percent / number2) * 100;
                         this.percentOfResult = result.toFixed(2);
                     } else {
                         this.percentOfResult = "Please enter valid numbers.";
