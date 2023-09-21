@@ -24,45 +24,57 @@
                     <h3 class="h4">{{ __('home.welcomeMessage') }} </h3>
                     <p> {{ __('home.p1') }}</p>
                     <hr>
-
-                    <div class="col-md-4">
-                        <h2 class="h3">{{ __('home.FinancialCalculators') }}</h2>
+                    <div class="row">
                         @php
                             $lang = app()->getLocale();
                         @endphp
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a
-                                    href="{{ route('home.budgetPlanner', ['locale' => $lang], true) }}">{{ __('home.BudgetPlanner') }}</a>
-                            </li>
+                        <div class="col-md-4">
+                            <h2 class="h3">{{ __('home.FinancialCalculators') }}</h2>
 
-                            <li class="list-group-item"><a
-                                href="{{ route('home.percentageCalculator', ['locale' => $lang], true) }}">{{ __('percentageCalculator.h1') }}</a>
-                            </li>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.budgetPlanner', ['locale' => $lang], true) }}">{{ __('home.BudgetPlanner') }}</a>
+                                </li>
 
-                            <li class="list-group-item"><a
-                                    href="{{ route('home.moneyCalculator', ['locale' => $lang], true) }}">{{ __('home.moneyCalculator') }}</a>
-                            </li>
-                            <li class="list-group-item"><a
-                                    href="{{ route('home.503020', ['locale' => $lang], true) }}">{{ __('503020.h1') }}</a>
-                            </li>
-                            <li class="list-group-item"><a
-                                    href="{{ route('home.saveForRetirement', ['locale' => $lang], true) }}">{{ __('compound.h1-RetirementSavings') }}</a>
-                            </li>
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.moneyCalculator', ['locale' => $lang], true) }}">{{ __('home.moneyCalculator') }}</a>
+                                </li>
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.503020', ['locale' => $lang], true) }}">{{ __('503020.h1') }}</a>
+                                </li>
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.saveForRetirement', ['locale' => $lang], true) }}">{{ __('compound.h1-RetirementSavings') }}</a>
+                                </li>
 
-                            <li class="list-group-item"><a
-                                href="{{ route('home.debtPayoff', ['locale' => $lang], true) }}">{{ __('debtPayoff.h1') }}</a>
-                            </li>
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.debtPayoff', ['locale' => $lang], true) }}">{{ __('debtPayoff.h1') }}</a>
+                                </li>
 
-                            <li class="list-group-item"><a
-                                href="{{ route('home.investmentCalculator', ['locale' => $lang], true) }}">{{ __('investmentCalculator.h1') }}</a>
-                            </li>
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.investmentCalculator', ['locale' => $lang], true) }}">{{ __('investmentCalculator.h1') }}</a>
+                                </li>
 
-                            <li class="list-group-item"><a
-                                href="{{ route('home.compoundInterestCalculator', ['locale' => $lang], true) }}">{{ __('compound.h1') }}</a>
-                            </li>
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.compoundInterestCalculator', ['locale' => $lang], true) }}">{{ __('compound.h1') }}</a>
+                                </li>
 
-                        </ul>
+                            </ul>
 
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-group list-group-flush">
+
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.percentageCalculator', ['locale' => $lang], true) }}">{{ __('percentageCalculator.h1') }}</a>
+                                </li>
+
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.percentDiffCalculator', ['locale' => $lang], true) }}">{{ __('percentDiffCalculator.h1') }}</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
                     </div>
 
                     <hr>
