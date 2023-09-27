@@ -72,6 +72,9 @@
                                         href="{{ route('home.percentDiffCalculator', ['locale' => $lang], true) }}">{{ __('percentDiffCalculator.h1') }}</a>
                                 </li>
 
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.percentageChangeCalculator', ['locale' => $lang], true) }}">{{ __('percentageChangeCalculator.h1') }}</a>
+                                </li>
                             </ul>
 
                         </div>

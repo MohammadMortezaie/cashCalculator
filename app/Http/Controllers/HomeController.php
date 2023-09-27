@@ -74,6 +74,10 @@ class HomeController extends Controller
     {
         return $this->setSeoAndOpenGraph('percentDiffCalculator.seoTitle', 'percentDiffCalculator.seoDescription', 'finance.percentDiffCalculator');
     }
+    public function percentageChangeCalculator(Request $request)
+    {
+        return $this->setSeoAndOpenGraph('percentageChangeCalculator.seoTitle', 'percentageChangeCalculator.seoDescription', 'finance.percentageChangeCalculator');
+    }
     public function privacyPolicy(Request $request)
     {
         return view('privacyPolicy');
