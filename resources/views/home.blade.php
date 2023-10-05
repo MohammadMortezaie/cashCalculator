@@ -80,6 +80,26 @@
                         </div>
                     </div>
 
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <hr>
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="h3">{{ __('bmi.FH') }}</h2>
+
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.bmi', ['locale' => $lang], true) }}">{{ __('bmi.h1') }}</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+
                     <hr>
                     <div class="row">
                         <div class="col-md-6">

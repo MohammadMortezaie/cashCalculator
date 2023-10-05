@@ -78,6 +78,18 @@ class HomeController extends Controller
     {
         return $this->setSeoAndOpenGraph('percentageChangeCalculator.seoTitle', 'percentageChangeCalculator.seoDescription', 'finance.percentageChangeCalculator');
     }
+
+
+
+    public function bmi(Request $request)
+    {
+        return $this->setSeoAndOpenGraph('bmi.seoTitle', 'bmi.seoDescription', 'health.bmi');
+    }
+
+
+
+
+
     public function privacyPolicy(Request $request)
     {
         return view('privacyPolicy');
