@@ -76,6 +76,8 @@
                                         action="{{ route('pdf.globalPDF', ['locale' => collect(request()->segments())[0]], true) }}"
                                         method="GET">
 
+                                        <input type="hidden" name="value[0]" value="{{__('bmi.bmi_result')}}">
+                                        <input type="hidden" name="value[1]" :value=" bmi.toFixed(2) ">
 
                                         <button type="submit"
                                             class="btn btn-success mt-2 ">{{ __('investmentCalculator.download_pdf_button') }}</button>
