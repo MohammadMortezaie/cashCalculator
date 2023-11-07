@@ -33,6 +33,10 @@ class HomeController extends Controller
     {
         return $this->setSeoAndOpenGraph('home.seoTitle', 'home.seoDescription', 'home');
     }
+    public function calculator(Request $request)
+    {
+        return $this->setSeoAndOpenGraph('free calculator', 'free calculator', 'finance.calculator');
+    }
     public function budgetPlanner(Request $request)
     {
         return $this->setSeoAndOpenGraph('BudgetPlanner.seoTitle', 'BudgetPlanner.seoDescription', 'finance.budgetPlanner');
