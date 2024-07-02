@@ -33,7 +33,7 @@
                     </p>
                     <div style="text-align: center" class="w-100">
                         <img class="img-fluid" alt="BMI-Chart-1024x708"
-                            src="https://www.lipedema.net/wp-content/uploads/2021/02/BMI-Chart-1024x708.png"
+                            src="https://www.lipedema.net/wp-content/uploads/2021/02/BMI-Chart-1024x708.png" alt="Bmi Calculate"
                             style="max-height: 400px; text-align: center" />
                     </div>
                     <hr>

@@ -69,47 +69,47 @@
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/en/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/en/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/US/flat/32.png"> {{ __('English') }} </a>
+                                    <img src="https://flagsapi.com/US/flat/32.png" alt="{{ __('English') }}"> {{ __('English') }} </a>
                                 <a class="dropdown-item"
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/fr/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/fr/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/FR/flat/32.png"> {{ __('French') }}</a>
+                                    <img src="https://flagsapi.com/FR/flat/32.png" alt=" {{ __('French') }}"> {{ __('French') }}</a>
                                 <a class="dropdown-item"
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/de/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/de/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/DE/flat/32.png"> {{ __('German') }}</a>
+                                    <img src="https://flagsapi.com/DE/flat/32.png" alt="{{ __('German') }}"> {{ __('German') }}</a>
                                 <a class="dropdown-item"
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/es/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/es/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/ES/flat/32.png"> {{ __('Spanish') }}</a>
+                                    <img src="https://flagsapi.com/ES/flat/32.png" alt="{{ __('Spanish') }}"> {{ __('Spanish') }}</a>
                                 <a class="dropdown-item"
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/it/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/it/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/IT/flat/32.png"> {{ __('Italian') }}</a>
+                                    <img src="https://flagsapi.com/IT/flat/32.png" alt="{{ __('Italian') }}"> {{ __('Italian') }}</a>
                                 <a class="dropdown-item"
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/ko/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/ko/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/KR/flat/32.png"> {{ __('Korean') }}</a>
+                                    <img src="https://flagsapi.com/KR/flat/32.png" alt="{{ __('Korean') }}"> {{ __('Korean') }}</a>
                                 <a class="dropdown-item"
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/pt-br/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/pt-br/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/BR/flat/32.png"> {{ __('Portuguese') }}</a>
+                                    <img src="https://flagsapi.com/BR/flat/32.png" alt="{{ __('Portuguese') }}"> {{ __('Portuguese') }}</a>
                                 <a class="dropdown-item"
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/ru/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/ru/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/RU/flat/32.png"> {{ __('Russian') }}</a>
+                                    <img src="https://flagsapi.com/RU/flat/32.png" alt="{{ __('Russian') }}"> {{ __('Russian') }}</a>
                                 <a class="dropdown-item"
                                     @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/zh-cn/' }}"
                                 @else
                                 href="{{ env('APP_URL') . '/zh-cn/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/CN/flat/32.png"> {{ __('Chinese') }}</a>
+                                    <img src="https://flagsapi.com/CN/flat/32.png" alt="{{ __('Chinese') }}"> {{ __('Chinese') }}</a>
                             </div>
                         </li>
                         <li class="nav-item">
