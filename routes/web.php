@@ -13,11 +13,18 @@
 |
 */
 
+
+
 $router->get('/', function () {
     return redirect('/en');
 });
 
+
 $router->group(['prefix' => '{locale}'], function () use ($router) {
+
+    $router->get('/sitemap.xml', ['as' => 'sitemap', 'uses' => 'SitemapController@index']);
+
+
 
     $router->get('/', ['as' => 'home', 'uses' => 'HomeController@home']);
     $router->get('/privacy-policy', ['as' => 'home.privacypolicy', 'uses' => 'HomeController@privacyPolicy']);
@@ -48,3 +55,4 @@ $router->group(['prefix' => '{locale}'], function () use ($router) {
 
 
 });
+
