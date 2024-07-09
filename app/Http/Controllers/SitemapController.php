@@ -47,6 +47,7 @@ class SitemapController extends Controller
         foreach ($pages as $page) {
             foreach ($locales as $locale) {
                 $url = $locale == 'en' ? url($page) : url("/$locale$page");
+                $url = str_replace('http://', 'https://', $url);
                 $sitemap .= '<url>';
                 $sitemap .= '<loc>' . htmlspecialchars($url) . '</loc>';
                 $sitemap .= '<lastmod>' . Carbon::now()->toAtomString() . '</lastmod>';
