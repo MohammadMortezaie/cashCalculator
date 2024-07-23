@@ -1,8 +1,5 @@
 @extends('main')
 
-@section('head')
-<META NAME="robots" CONTENT="noindex,nofollow">
-@endsection
 
 @section('content')
     <div class="container">

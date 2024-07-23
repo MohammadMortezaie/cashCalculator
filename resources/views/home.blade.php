@@ -58,6 +58,7 @@
                                         href="{{ route('home.compoundInterestCalculator', ['locale' => $lang], true) }}">{{ __('compound.h1') }}</a>
                                 </li>
 
+
                             </ul>
 
                         </div>
@@ -74,6 +75,9 @@
 
                                 <li class="list-group-item"><a
                                         href="{{ route('home.percentageChangeCalculator', ['locale' => $lang], true) }}">{{ __('percentageChangeCalculator.h1') }}</a>
+                                </li>
+                                <li class="list-group-item"><a
+                                        href="{{ route('home.calculator', ['locale' => $lang], true) }}">{{ __('calculator') }}</a>
                                 </li>
                             </ul>
 

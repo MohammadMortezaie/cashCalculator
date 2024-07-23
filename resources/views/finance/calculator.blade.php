@@ -21,7 +21,8 @@
             padding: 10px;
             border-radius: 1em;
             height: 380px;
-            width: 400px;
+            max-width: 500px;
+            width: 100%;
             margin: auto;
             background-color: #191b28;
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
