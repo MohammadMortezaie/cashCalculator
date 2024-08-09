@@ -34,7 +34,7 @@
     </script>
     @yield('head')
 
-
+    <link rel="canonical" href="{{URL::current()}}">
 </head>
 
 <body>
