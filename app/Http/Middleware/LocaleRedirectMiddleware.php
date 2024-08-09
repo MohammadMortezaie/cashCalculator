@@ -23,7 +23,7 @@ class LocaleRedirectMiddleware
             } else {
                 // Redirect to the 'en' locale
                 $segments[0] = 'en';
-                return redirect(implode('/', $segments));
+                return redirect(implode('/', $segments), 301);
             }
         } elseif (count($segments) == 1) {
             if (in_array($segments[0], ['en', 'fr', 'es', 'it', 'de', 'pt-br', 'zh-cn', 'ko', 'ru'])) {
