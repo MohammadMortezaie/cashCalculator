@@ -137,7 +137,7 @@
     <footer class="mt-4 navbar-cashcalculator">
         <div class="container ">
             <div class="row text-light py-2 ml-1">
-                © 2023 - CashCalculator.net
+                © 2023 - CashCalculator.net <a  class="fw-bold" href="https://webpulse.ca/" > Webpulse </a>
             </div>
         </div>
     </footer>
