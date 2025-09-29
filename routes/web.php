@@ -14,6 +14,7 @@
 */
 
 
+$router->get('/sitemap.xml', ['as' => 'sitemap', 'uses' => 'SitemapController@index']);
 
 $router->get('/', function () {
     return redirect('/en');
@@ -22,9 +23,6 @@ $router->get('/', function () {
 
 $router->group(['prefix' => '{locale}'], function () use ($router) {
 
-    $router->get('/sitemap.xml', ['as' => 'sitemap', 'uses' => 'SitemapController@index']);
-
-
 
     $router->get('/', ['as' => 'home', 'uses' => 'HomeController@home']);
     $router->get('/privacy-policy', ['as' => 'home.privacypolicy', 'uses' => 'HomeController@privacyPolicy']);
@@ -32,7 +30,7 @@ $router->group(['prefix' => '{locale}'], function () use ($router) {
 
     // finance
     $router->get('/calculator', ['as' => 'home.calculator', 'uses' => 'HomeController@calculator']);
-    $router->get('/budget-planner', ['as' => 'home.budgetPlanner', 'uses' => 'HomeController@budgetPlanner']);
+    $router->get('/budget-plaenner', ['as' => 'home.budgetPlanner', 'uses' => 'HomeController@budgetPlanner']);
     $router->get('/money-calculator', ['as' => 'home.moneyCalculator', 'uses' => 'HomeController@moneyCalculator']);
     $router->get('/50-30-20', ['as' => 'home.503020', 'uses' => 'HomeController@budget503020']);
     $router->get('/retirement-savings-calculator', ['as' => 'home.saveForRetirement', 'uses' => 'HomeController@saveForRetirement']);
