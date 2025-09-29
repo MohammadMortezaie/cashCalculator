@@ -47,5 +47,57 @@ return [
     'changes_to_this_privacy_policy_title' => 'Modifiche a Questa Informativa sulla Privacy',
     'changes_to_this_privacy_policy_description' => "CashCalculator.net si riserva il diritto di aggiornare questa politica sulla privacy, con o senza preavviso. Pertanto, vi consigliamo di rivedere periodicamente questa pagina per eventuali modifiche. Vi informeremo di eventuali modifiche pubblicando la politica sulla privacy aggiornata su questa pagina. Queste modifiche saranno efficaci immediatamente dopo la loro pubblicazione qui.",
 
+
+     // ==== SEO ====
+
+    // ==== Headings / Hero ====
+    'kicker' => 'Preciso • Veloce • Gratuito',
+    'cta_primary' => 'Prova il Contatore di Denaro',
+    'cta_secondary' => 'Esplora tutte le calcolatrici',
+    'cta_headline' => 'Pronto a fare i tuoi calcoli?',
+    'cta_sub' => 'Apri una calcolatrice e ottieni risultati immediati e accurati.',
+    'open_tool' => 'Apri strumento',
+    'popular' => 'Più popolare',
+    'top_tools' => 'Strumenti in evidenza',
+
+    // ==== Languages ====
+    'lang_note' => 'Disponibile in 9 lingue per un accesso globale',
+    'supported_langs' => 'Lingue supportate',
+
+    // ==== Calculator Categories ====
+    'MathCalculators' => 'Strumenti di matematica e percentuali',
+
+    // ==== Individual Calculators ====
+    'percentageCalculator' => 'Calcolatrice delle percentuali',
+    'percentDiffCalculator' => 'Calcolatrice della differenza percentuale',
+    'percentageChangeCalculator' => 'Calcolatrice della variazione percentuale',
+    'calculator' => 'Calcolatrice base',
+
+    // ==== Health ====
+    'desc_bmi' => 'Calcola facilmente e rapidamente il tuo Indice di Massa Corporea (IMC).',
+
+    // ==== Calculator Descriptions (for cards) ====
+    'desc_moneycalculator' => 'Gratis: conta e calcola il denaro in modo rapido e preciso con il nostro strumento più popolare.',
+    'desc_budgetplanner' => 'Pianifica facilmente il tuo budget con questo strumento passo dopo passo.',
+    'desc_503020' => 'Segui la regola del 50/30/20 per bilanciare spese e risparmi.',
+    'desc_retirement' => 'Stima i tuoi risparmi per la pensione e pianifica il futuro.',
+    'desc_debtpayoff' => 'Scopri quanto tempo occorre per estinguere i tuoi debiti ed esplora strategie di rimborso.',
+    'desc_investment' => 'Calcola i rendimenti dei tuoi investimenti con diversi tassi di crescita.',
+    'desc_compound' => 'Scopri come l’interesse composto fa crescere i tuoi risparmi nel tempo.',
+    'desc_percentage' => 'Calcola facilmente le percentuali in pochi secondi.',
+    'desc_percentdiff' => 'Trova la differenza tra due numeri in termini percentuali.',
+    'desc_percentagechange' => 'Calcola la variazione percentuale tra due valori.',
+    'desc_basiccalc' => 'Esegui rapidamente calcoli semplici con la nostra calcolatrice online.',
+
+    // ==== FAQ (optional section) ====
+    'faq' => 'Domande frequenti',
+    'faq_free' => 'Queste calcolatrici sono davvero gratuite?',
+    'faq_free_a' => 'Sì. Tutti gli strumenti sono al 100% gratuiti e non richiedono registrazione.',
+    'faq_accuracy' => 'Quanto sono accurati i risultati?',
+    'faq_accuracy_a' => 'Verifichiamo attentamente tutte le formule. Se noti un errore, contattaci e lo correggeremo rapidamente.',
+    'faq_lang' => 'Supportate più lingue?',
+    'faq_lang_a' => 'Sì — Inglese, Francese, Spagnolo, Italiano, Tedesco, Portoghese (BR), Cinese, Coreano e Russo.',
+
+
 ];
 

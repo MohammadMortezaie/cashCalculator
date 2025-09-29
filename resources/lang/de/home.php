@@ -46,4 +46,56 @@ return [
     'childrens_privacy_description' => "CashCalculator.net richtet sich nicht an Personen unter 13 Jahren. Wir sammeln absichtlich keine persönlich identifizierbaren Informationen von Kindern unter 13 Jahren. Sollten wir feststellen, dass ein Kind unter 13 Jahren uns persönliche Informationen zur Verfügung gestellt hat, werden wir diese umgehend von unseren Servern löschen. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und wissen, dass Ihr Kind uns persönliche Informationen zur Verfügung gestellt hat, kontaktieren Sie uns bitte, damit wir die erforderlichen Maßnahmen ergreifen können.",
     'changes_to_this_privacy_policy_title' => 'Änderungen an dieser Datenschutzrichtlinie',
     'changes_to_this_privacy_policy_description' => 'CashCalculator.net behält sich das Recht vor, diese Datenschutzrichtlinie mit oder ohne Vorankündigung zu aktualisieren. Daher empfehlen wir Ihnen, diese Seite regelmäßig auf Änderungen zu überprüfen. Wir werden Sie über alle Änderungen informieren, indem wir die aktualisierte Datenschutzrichtlinie auf dieser Seite veröffentlichen. Diese Änderungen treten sofort nach Veröffentlichung in Kraft.',
+  // ==== SEO ====
+
+    // ==== Headings / Hero ====
+    'kicker' => 'Genau • Schnell • Kostenlos',
+    'cta_primary' => 'Geldzähler ausprobieren',
+    'cta_secondary' => 'Alle Rechner entdecken',
+    'cta_headline' => 'Bereit, die Zahlen zu berechnen?',
+    'cta_sub' => 'Öffnen Sie einen Rechner und erhalten Sie sofort präzise Ergebnisse.',
+    'open_tool' => 'Tool öffnen',
+    'popular' => 'Am beliebtesten',
+    'top_tools' => 'Beliebte Tools',
+
+    // ==== Languages ====
+    'lang_note' => 'In 9 Sprachen weltweit verfügbar',
+    'supported_langs' => 'Unterstützte Sprachen',
+
+    // ==== Calculator Categories ====
+    'MathCalculators' => 'Mathematik- & Prozent-Tools',
+
+    // ==== Individual Calculators ====
+    'percentageCalculator' => 'Prozentrechner',
+    'percentDiffCalculator' => 'Prozentdifferenz-Rechner',
+    'percentageChangeCalculator' => 'Prozentänderungs-Rechner',
+    'calculator' => 'Einfacher Rechner',
+
+    // ==== Health ====
+    'desc_bmi' => 'Berechnen Sie Ihren Body-Mass-Index (BMI) einfach und schnell.',
+
+    // ==== Calculator Descriptions (for cards) ====
+    'desc_moneycalculator' => 'Kostenloses Zählen und schnelles, präzises Berechnen von Geld mit unserem beliebtesten Tool.',
+    'desc_budgetplanner' => 'Planen Sie Ihr Budget ganz einfach mit diesem Schritt-für-Schritt-Tool.',
+    'desc_503020' => 'Folgen Sie der 50/30/20-Regel, um Ausgaben und Ersparnisse auszugleichen.',
+    'desc_retirement' => 'Schätzen Sie Ihre Rentenersparnisse ab und planen Sie für die Zukunft.',
+    'desc_debtpayoff' => 'Ermitteln Sie, wie lange es dauert, Ihre Schulden abzuzahlen, und prüfen Sie Rückzahlungsstrategien.',
+    'desc_investment' => 'Berechnen Sie die Rendite Ihrer Investitionen bei unterschiedlichen Wachstumsraten.',
+    'desc_compound' => 'Sehen Sie, wie Zinseszins Ihr Vermögen im Laufe der Zeit vermehrt.',
+    'desc_percentage' => 'Berechnen Sie Prozentsätze in Sekundenschnelle.',
+    'desc_percentdiff' => 'Finden Sie die prozentuale Differenz zwischen zwei Zahlen.',
+    'desc_percentagechange' => 'Berechnen Sie die prozentuale Veränderung zwischen zwei Werten.',
+    'desc_basiccalc' => 'Führen Sie schnelle und einfache Berechnungen mit unserem Online-Rechner durch.',
+
+    // ==== FAQ (optional section) ====
+    'faq' => 'Häufig gestellte Fragen',
+    'faq_free' => 'Sind diese Rechner wirklich kostenlos?',
+    'faq_free_a' => 'Ja. Alle Tools sind zu 100 % kostenlos und erfordern keine Registrierung.',
+    'faq_accuracy' => 'Wie genau sind die Ergebnisse?',
+    'faq_accuracy_a' => 'Wir prüfen alle Formeln sorgfältig. Wenn Sie ein Problem entdecken, kontaktieren Sie uns bitte – wir beheben es schnell.',
+    'faq_lang' => 'Unterstützen Sie mehrere Sprachen?',
+    'faq_lang_a' => 'Ja — Englisch, Französisch, Spanisch, Italienisch, Deutsch, Portugiesisch (BR), Chinesisch, Koreanisch und Russisch.',
+
+
+
 ];

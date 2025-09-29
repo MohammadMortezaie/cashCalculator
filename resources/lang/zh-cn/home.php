@@ -54,4 +54,57 @@ return [
     'changes_to_this_privacy_policy_title' => '本隐私政策的变更',
     'changes_to_this_privacy_policy_description' => 'CashCalculator.net保留随时更新本隐私政策的权利，无论是否提前通知。因此，我们建议您定期查看此页面以查看任何更改。我们将通过在此页面上发布更新的隐私政策来通知您任何更改。这些更改将在发布后立即生效。',
 
+
+ // ==== SEO ====
+
+    // ==== Headings / Hero ====
+    'kicker' => '精准 • 快速 • 免费',
+    'cta_primary' => '试用金额计算器',
+    'cta_secondary' => '浏览所有计算器',
+    'cta_headline' => '准备好开始计算了吗？',
+    'cta_sub' => '打开一个计算器，立即获得准确结果。',
+    'open_tool' => '打开工具',
+    'popular' => '热门',
+    'top_tools' => '趋势工具',
+
+    // ==== Languages ====
+    'lang_note' => '支持 9 种语言，全球皆可使用',
+    'supported_langs' => '支持的语言',
+
+    // ==== Calculator Categories ====
+    'MathCalculators' => '数学与百分比工具',
+
+    // ==== Individual Calculators ====
+    'percentageCalculator' => '百分比计算器',
+    'percentDiffCalculator' => '百分比差异计算器',
+    'percentageChangeCalculator' => '百分比变化计算器',
+    'calculator' => '基础计算器',
+
+    // ==== Health ====
+    'desc_bmi' => '轻松快速计算您的身体质量指数（BMI）。',
+
+    // ==== Calculator Descriptions (for cards) ====
+    'desc_moneycalculator' => '免费：使用我们最受欢迎的工具快速、准确地清点和计算金额。',
+    'desc_budgetplanner' => '使用这个分步骤工具轻松规划您的预算。',
+    'desc_503020' => '遵循 50/30/20 预算规则，平衡消费与储蓄。',
+    'desc_retirement' => '估算您的退休储蓄并规划未来。',
+    'desc_debtpayoff' => '了解偿还债务需要多长时间，并探索还款策略。',
+    'desc_investment' => '根据不同的增长率计算您的投资回报。',
+    'desc_compound' => '查看复利如何随着时间推移增加您的储蓄。',
+    'desc_percentage' => '几秒钟内轻松计算百分比。',
+    'desc_percentdiff' => '计算两个数字之间的百分比差异。',
+    'desc_percentagechange' => '计算两个数值之间的百分比变化。',
+    'desc_basiccalc' => '使用我们的在线计算器快速完成简单计算。',
+
+    // ==== FAQ (optional section) ====
+    'faq' => '常见问题',
+    'faq_free' => '这些计算器真的免费吗？',
+    'faq_free_a' => '是的。所有工具 100% 免费使用，无需注册。',
+    'faq_accuracy' => '结果有多准确？',
+    'faq_accuracy_a' => '我们对公式进行了严格验证。如果您发现问题，请联系我们，我们会尽快修复。',
+    'faq_lang' => '是否支持多种语言？',
+    'faq_lang_a' => '是的 — 支持英语、法语、西班牙语、意大利语、德语、葡萄牙语（巴西）、中文、韩语和俄语。',
+
+
+
 ];

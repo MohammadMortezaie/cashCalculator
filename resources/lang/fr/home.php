@@ -46,5 +46,57 @@ return [
     'childrens_privacy_description' => 'CashCalculator.net ne s\'adresse pas aux personnes de moins de 13 ans. Nous ne collectons pas intentionnellement d\'informations personnelles identifiables auprès d\'enfants de moins de 13 ans. Si nous découvrons qu\'un enfant de moins de 13 ans nous a fourni des informations personnelles, nous les supprimerons immédiatement de nos serveurs. Si vous êtes parent ou tuteur et que vous êtes conscient que votre enfant nous a fourni des informations personnelles, veuillez nous contacter afin que nous puissions prendre les mesures nécessaires.',
     'changes_to_this_privacy_policy_title' => 'Modifications de cette Politique de Confidentialité',
     'changes_to_this_privacy_policy_description' => 'CashCalculator.net se réserve le droit de mettre à jour cette politique de confidentialité, avec ou sans préavis. Par conséquent, nous vous recommandons de consulter périodiquement cette page pour prendre connaissance des modifications éventuelles. Nous vous informerons de tout changement en publiant la Politique de Confidentialité mise à jour sur cette page. Ces changements prendront effet immédiatement après leur publication ici.',
+
+ // ==== SEO ====
+
+    // ==== Headings / Hero ====
+    'kicker' => 'Précis • Rapide • Gratuit',
+    'cta_primary' => 'Essayer le Compteur d’Argent',
+    'cta_secondary' => 'Explorer tous les calculateurs',
+    'cta_headline' => 'Prêt à faire vos calculs ?',
+    'cta_sub' => 'Ouvrez un calculateur et obtenez des résultats instantanés et précis.',
+    'open_tool' => 'Ouvrir l’outil',
+    'popular' => 'Le plus populaire',
+    'top_tools' => 'Outils tendance',
+
+    // ==== Languages ====
+    'lang_note' => 'Disponible en 9 langues pour un accès mondial',
+    'supported_langs' => 'Langues prises en charge',
+
+    // ==== Calculator Categories ====
+    'MathCalculators' => 'Outils de mathématiques et de pourcentages',
+
+    // ==== Individual Calculators ====
+    'percentageCalculator' => 'Calculateur de pourcentage',
+    'percentDiffCalculator' => 'Calculateur de différence en pourcentage',
+    'percentageChangeCalculator' => 'Calculateur de variation en pourcentage',
+    'calculator' => 'Calculatrice basique',
+
+    // ==== Health ====
+    'desc_bmi' => 'Calculez facilement et rapidement votre indice de masse corporelle (IMC).',
+
+    // ==== Calculator Descriptions (for cards) ====
+    'desc_moneycalculator' => 'Gratuit : comptez et calculez l’argent rapidement et avec précision grâce à notre outil le plus populaire.',
+    'desc_budgetplanner' => 'Planifiez votre budget facilement avec cet outil étape par étape.',
+    'desc_503020' => 'Suivez la règle budgétaire 50/30/20 pour équilibrer dépenses et économies.',
+    'desc_retirement' => 'Estimez vos économies pour la retraite et préparez votre avenir.',
+    'desc_debtpayoff' => 'Découvrez combien de temps il vous faudra pour rembourser vos dettes et explorez différentes stratégies de paiement.',
+    'desc_investment' => 'Calculez les rendements de vos investissements avec différents taux de croissance.',
+    'desc_compound' => 'Voyez comment les intérêts composés font croître vos économies au fil du temps.',
+    'desc_percentage' => 'Calculez facilement des pourcentages en quelques secondes.',
+    'desc_percentdiff' => 'Trouvez la différence entre deux nombres en termes de pourcentage.',
+    'desc_percentagechange' => 'Calculez la variation en pourcentage entre deux valeurs.',
+    'desc_basiccalc' => 'Effectuez rapidement des calculs simples grâce à notre calculatrice en ligne.',
+
+    // ==== FAQ (optional section) ====
+    'faq' => 'Questions fréquentes',
+    'faq_free' => 'Ces calculateurs sont-ils vraiment gratuits ?',
+    'faq_free_a' => 'Oui. Tous les outils sont 100 % gratuits et ne nécessitent aucune inscription.',
+    'faq_accuracy' => 'Quelle est la précision des résultats ?',
+    'faq_accuracy_a' => 'Nous validons soigneusement toutes les formules. Si vous trouvez une erreur, contactez-nous et nous la corrigerons rapidement.',
+    'faq_lang' => 'Proposez-vous plusieurs langues ?',
+    'faq_lang_a' => 'Oui — Anglais, Français, Espagnol, Italien, Allemand, Portugais (BR), Chinois, Coréen et Russe.',
+
+
 ];
 

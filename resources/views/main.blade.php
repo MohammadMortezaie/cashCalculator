@@ -34,97 +34,91 @@
     </script>
     @yield('head')
 
-    <link rel="canonical" href="{{URL::current()}}">
+    <link rel="canonical" href="{{ URL::current() }}">
 </head>
 
 <body>
-    <div class="w-100 navbar-cashcalculator">
-        <div class="container">
 
-            <nav class=" row navbar navbar-expand-md  navbar-dark">
+    <div class=" cc-navbar w-100 navbar-cashcalculator">
+        <div class="container ">
+            @php
+                $segments = request()->segments();
+                $locale = $segments[0] ?? 'en';
+                // Rebuild remainder of the path after the locale to preserve deep paths
+                $remainder = implode('/', array_slice($segments, 1));
+
+                // Locale label + flag map
+                $locales = [
+                    'en' => ['label' => __('home.English'), 'flag' => 'US'],
+                    'fr' => ['label' => __('home.French'), 'flag' => 'FR'],
+                    'de' => ['label' => __('home.German'), 'flag' => 'DE'],
+                    'es' => ['label' => __('home.Spanish'), 'flag' => 'ES'],
+                    'it' => ['label' => __('home.Italian'), 'flag' => 'IT'],
+                    'ko' => ['label' => __('home.Korean'), 'flag' => 'KR'],
+                    'pt-br' => ['label' => __('home.Portuguese'), 'flag' => 'BR'],
+                    'ru' => ['label' => __('home.Russian'), 'flag' => 'RU'],
+                    'zh-cn' => ['label' => __('home.Chinese'), 'flag' => 'CN'],
+                ];
+
+                // Helper to build localized URLs preserving the remainder of the path
+                $localizedUrl = function (string $code) use ($remainder) {
+                    $base = rtrim(env('APP_URL'), '/');
+                    return $remainder ? "{$base}/{$code}/{$remainder}" : "{$base}/{$code}";
+                };
+            @endphp
+
+            <nav class="row navbar navbar-expand-md navbar-dark  px-3">
                 <!-- Brand -->
-                <a class="navbar-brand"
-                    href="{{ route('home', ['locale' => collect(request()->segments())[0]], true) }}">CashCalculator<span
-                        class="text-success h4">.net</span></a>
-                <!-- Toggler/collapsibe Button -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <a class="navbar-brand d-flex align-items-center gap-2"
+                    href="{{ route('home', ['locale' => $locale], true) }}">
+                    <span class="cc-logo">CashCalculator</span><span class="cc-dot">.net</span>
+                </a>
+
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ccNav"
+                    aria-controls="ccNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Navbar links -->
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav mr-auto">
-                    </ul>
-                    @php
-                        $segmentCount = count(request()->segments());
-                    @endphp
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="ccNav">
+                    <ul class="navbar-nav mr-auto"></ul>
 
-                    <ul class="navbar-nav ">
-                        <!-- Dropdown -->
+                    <ul class="navbar-nav align-items-md-center">
+                        <!-- Language dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop"
-                                data-toggle="dropdown">{{ __('home.language') }}
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="langDrop"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="cc-flag mr-2"
+                                    src="https://flagsapi.com/{{ $locales[$locale]['flag'] ?? 'US' }}/flat/24.png"
+                                    alt="">
+                                <span class="d-none d-sm-inline">{{ __('home.language') }}</span>
+                                <span class="d-inline d-sm-none">{{ strtoupper($locale) }}</span>
                             </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/en/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/en/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/US/flat/32.png" alt="{{ __('English') }}"> {{ __('English') }} </a>
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/fr/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/fr/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/FR/flat/32.png" alt=" {{ __('French') }}"> {{ __('French') }}</a>
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/de/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/de/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/DE/flat/32.png" alt="{{ __('German') }}"> {{ __('German') }}</a>
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/es/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/es/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/ES/flat/32.png" alt="{{ __('Spanish') }}"> {{ __('Spanish') }}</a>
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/it/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/it/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/IT/flat/32.png" alt="{{ __('Italian') }}"> {{ __('Italian') }}</a>
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/ko/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/ko/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/KR/flat/32.png" alt="{{ __('Korean') }}"> {{ __('Korean') }}</a>
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/pt-br/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/pt-br/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/BR/flat/32.png" alt="{{ __('Portuguese') }}"> {{ __('Portuguese') }}</a>
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/ru/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/ru/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/RU/flat/32.png" alt="{{ __('Russian') }}"> {{ __('Russian') }}</a>
-                                <a class="dropdown-item"
-                                    @if ($segmentCount <= 1) href="{{ env('APP_URL') . '/zh-cn/' }}"
-                                @else
-                                href="{{ env('APP_URL') . '/zh-cn/' . collect(request()->segments())->last() }}" @endif>
-                                    <img src="https://flagsapi.com/CN/flat/32.png" alt="{{ __('Chinese') }}"> {{ __('Chinese') }}</a>
+                            <div class="dropdown-menu dropdown-menu-right shadow-sm" aria-labelledby="langDrop">
+                                @foreach ($locales as $code => $meta)
+                                    <a class="dropdown-item d-flex align-items-center {{ $code === $locale ? 'active' : '' }}"
+                                        href="{{ $localizedUrl($code) }}"
+                                        @if ($code === $locale) aria-current="true" @endif>
+                                        <img class="cc-flag mr-2"
+                                            src="https://flagsapi.com/{{ $meta['flag'] }}/flat/24.png" alt="">
+                                        <span>{{ $meta['label'] }}</span>
+                                    </a>
+                                @endforeach
                             </div>
                         </li>
+
+                        <!-- Primary links -->
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="{{ route('home', ['locale' => collect(request()->segments())[0]], true) }}">{{ __('home.home') }}</a>
+                            <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
+                                href="{{ route('home', ['locale' => $locale], true) }}">{{ __('home.home') }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="{{ route('home.privacypolicy', ['locale' => collect(request()->segments())[0]], true) }}">{{ __('home.privacy_policy_title') }}</a>
+                            <a class="nav-link {{ request()->routeIs('home.privacypolicy') ? 'active' : '' }}"
+                                href="{{ route('home.privacypolicy', ['locale' => $locale], true) }}">{{ __('home.privacy_policy_title') }}</a>
                         </li>
-
                     </ul>
-
                 </div>
             </nav>
         </div>
@@ -134,10 +128,10 @@
         @yield('content')
     </main>
 
-    <footer class="mt-4 navbar-cashcalculator">
+    <footer class="mt-4 cc-navbar navbar-cashcalculator">
         <div class="container ">
             <div class="row text-light py-2 ml-1">
-                © 2023 - CashCalculator.net <a  class="pl-2 fw-bold" href="https://webpulse.ca/" > Webpulse </a>
+                © 2023 - CashCalculator.net <a class="pl-2 fw-bold" href="https://webpulse.ca/"> Webpulse </a>
             </div>
         </div>
     </footer>

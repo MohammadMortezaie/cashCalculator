@@ -15,6 +15,11 @@ class LocaleRedirectMiddleware
      */
     public function handle($request, Closure $next)
     {
+          // Exclude sitemap.xml from locale redirect
+    if ($request->is('*/sitemap.xml') || $request->is('sitemap.xml')) {
+        return $next($request);
+    }
+
         $segments = $request->segments(); // Get all segments of the URL
 
         if (count($segments) == 2) {

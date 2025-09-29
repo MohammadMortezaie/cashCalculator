@@ -63,5 +63,55 @@ return [
     'childrens_privacy_description' => "CashCalculator.net does not cater to individuals under the age of 13. We do not intentionally collect personally identifiable information from children under 13. If we discover that a child under 13 has submitted personal information to us, we will promptly delete it from our servers. If you are a parent or guardian and are aware that your child has provided us with personal information, kindly contact us so that we can take appropriate action.",
     'changes_to_this_privacy_policy_title' => 'Changes to This Privacy Policy',
     'changes_to_this_privacy_policy_description' => 'CashCalculator.net reserves the right to update this privacy policy, with or without notice. Therefore, we advise you to periodically review this page for any modifications. We will notify you of any changes by posting the updated Privacy Policy on this page. These changes will be effective immediately after they are posted here.',
+  // ==== SEO ====
+
+    // ==== Headings / Hero ====
+    'kicker' => 'Accurate • Fast • Free',
+    'cta_primary' => 'Try Money Counter',
+    'cta_secondary' => 'Explore All Calculators',
+    'cta_headline' => 'Ready to crunch the numbers?',
+    'cta_sub' => 'Open a calculator and get instant, accurate results.',
+    'open_tool' => 'Open Tool',
+    'popular' => 'Popular',
+    'top_tools' => 'Trending Tools',
+
+    // ==== Languages ====
+    'lang_note' => 'Serving 9 languages for global access',
+    'supported_langs' => 'Supported Languages',
+
+    // ==== Calculator Categories ====
+   'MathCalculators' => 'Math & Percentage Tools',
+
+    // ==== Individual Calculators ====
+    'percentageCalculator' => 'Percentage Calculator',
+    'percentDiffCalculator' => 'Percent Difference Calculator',
+    'percentageChangeCalculator' => 'Percentage Change Calculator',
+    'calculator' => 'Basic Calculator',
+
+    // ==== Health ====
+    'desc_bmi' => 'Calculate your Body Mass Index (BMI) easily and quickly.',
+
+
+    // ==== Calculator Descriptions (for cards) ====
+    'desc_moneycalculator' => 'Free Count and calculate money fast and accurately with our most popular tool.',
+    'desc_budgetplanner' => 'Plan your budget with ease using this step-by-step tool.',
+    'desc_503020' => 'Follow the 50/30/20 budgeting rule to balance spending and saving.',
+    'desc_retirement' => 'Estimate your retirement savings and plan for the future.',
+    'desc_debtpayoff' => 'See how long it will take to pay off your debt and explore payoff strategies.',
+    'desc_investment' => 'Calculate returns on your investments with different growth rates.',
+    'desc_compound' => 'See how compound interest grows your savings over time.',
+    'desc_percentage' => 'Easily calculate percentages in seconds.',
+    'desc_percentdiff' => 'Find the difference between two numbers in percentage terms.',
+    'desc_percentagechange' => 'Calculate percentage change between two values.',
+    'desc_basiccalc' => 'Perform quick and simple math with our online calculator.',
+
+    // ==== FAQ (optional section) ====
+    'faq' => 'Frequently Asked Questions',
+    'faq_free' => 'Are these calculators really free?',
+    'faq_free_a' => 'Yes. All tools are 100% free to use with no registration required.',
+    'faq_accuracy' => 'How accurate are the results?',
+    'faq_accuracy_a' => 'We validate formulas carefully. If you spot an issue, contact us and we’ll fix it fast.',
+    'faq_lang' => 'Do you support multiple languages?',
+    'faq_lang_a' => 'Yes — English, French, Spanish, Italian, German, Portuguese (BR), Chinese, Korean, and Russian.',
 
 ];

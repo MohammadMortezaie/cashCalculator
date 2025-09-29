@@ -1,3 +1,224 @@
+
+/* --- Minimal, tasteful enhancements (no external icon libs required) --- */
+    /* Minimal custom CSS; Bootstrap does the heavy lifting */
+       /* ========= Design System: premium financial look ========= */
+        :root{
+            --ink:#0f172a;             /* titles */
+            --muted:#5b6b7e;           /* body text */
+            --bg:#f6f9fc;              /* page / band bg */
+            --card:#ffffff;            /* card bg */
+            --border:#e6edf4;          /* borders */
+            --primary:#0d47a1;         /* trust blue */
+            --accent:#198754;          /* financial green */
+            --accent-weak:#d1f2e1;     /* light green for highlights */
+            --warning:#f59e0b;         /* popular badge */
+            --shadow:0 14px 40px rgba(15,23,42,.08);
+        }
+
+        /* Typography + globals */
+        body { background:#fff; }
+        .text-ink { color:var(--ink) !important; }
+        .text-muted-cc { color:var(--muted) !important; }
+
+        /* Containers */
+        .wrap { max-width:1180px; margin-inline:auto; }
+
+        /* HERO */
+        .hero {
+            background:
+                radial-gradient(900px 500px at 100% 0%, rgba(13,71,161,.12), transparent 55%),
+                radial-gradient(900px 500px at 0% 0%, rgba(25,135,84,.12), transparent 55%),
+                linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+        }
+        .hero-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Buttons: pill, precise spacing, clear focus, subtle hover lift */
+        .btn-pill { border-radius: 999px; font-weight: 700; letter-spacing: .2px; }
+        .btn-xl { padding:.95rem 1.35rem; }
+        .btn-outline-ink { border-color: var(--ink); color: var(--ink); }
+        .btn-outline-ink:hover, .btn-outline-ink:focus { background: var(--ink); color:#fff; }
+        .btn-dark-cc { background:#0b1220; border-color:#0b1220; color:#fff; }
+        .btn-dark-cc:hover { transform: translateY(-1px); color:#fff; }
+        .btn-soft {
+            background: linear-gradient(180deg, #fff 0%, #f4f7fb 100%);
+            border:1px solid var(--border);
+        }
+
+        /* Cards (calculators) */
+        .cc-card{
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+            height:100%;
+        }
+        .cc-card:hover{ transform: translateY(-3px); box-shadow: var(--shadow); border-color:#dfe6ee; }
+        .cc-card .title { font-weight:700; color:var(--ink); }
+        .cc-card .desc { color:var(--muted); }
+
+        /* Feature / spotlight */
+        .spotlight {
+            border: 2px solid rgba(25,135,84,.35);
+            background: linear-gradient(180deg, #ffffff 0%, #f7fbf9 100%);
+        }
+        .popular-badge{
+            background: linear-gradient(90deg, #fde68a, #fbbf24);
+            color:#1f2937; font-weight:800; border-radius:999px; padding:.28rem .6rem; font-size:.75rem;
+        }
+/* Tablets */
+@media (max-width: 991.98px) {
+    .popular-badge {
+        font-size:.7rem;
+        padding:.25rem .55rem;
+    }
+}
+
+/* Phones */
+@media (max-width: 575.98px) {
+    .popular-badge {
+        font-size:.65rem;
+        padding:.22rem .5rem;
+    }
+}
+        /* Sections */
+        .section-title { font-weight: 800; color:var(--ink); letter-spacing:.2px; }
+        .divider { height:1px; background:var(--border); }
+
+        /* Language bar */
+        .lang-btn{
+            border-radius:999px; padding:.45rem .9rem; font-weight:600;
+            border:1px solid var(--border); background:#fff; color:var(--ink);
+        }
+        .lang-btn:hover { border-color:#cfd9e5; box-shadow:0 8px 24px rgba(15,23,42,.06); transform:translateY(-1px); }
+        .lang-btn.active{ background:var(--ink); color:#fff; border-color:var(--ink); }
+
+        /* Responsive tweaks */
+        @media (max-width: 991.98px){
+            .hero-padding { padding-top: 2rem; padding-bottom: 2rem; }
+        }
+/* Grid spacing */
+.row.g-4 { --bs-gutter-x: 1.2rem; --bs-gutter-y: 1.2rem; }
+
+/* Card adjustments */
+.cc-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .15s ease, box-shadow .15s ease;
+  height: 100%;
+}
+.cc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.cc-card .title { font-weight: 700; color: var(--ink); margin-bottom: .35rem; }
+.cc-card .desc { color: var(--muted); font-size: .95rem; flex-grow: 1; }
+
+/* Button inside cards */
+.cc-card .btn {
+  margin-top: .5rem;
+  font-size: .85rem;
+  padding: .35rem 1rem;
+}
+
+/* Brand gradient button */
+.btn-brand {
+  background: linear-gradient(90deg, #18357b, #2e98f3);
+  border: none;
+  color: #fff;
+}
+.btn-brand:hover { opacity: .9; color: #fff; }
+
+/* Outline brand */
+.btn-outline-ink {
+  border-color: #18357b;
+  color: #18357b;
+}
+.btn-outline-ink:hover {
+  background: #18357b;
+  color: #fff;
+}
+
+
+/* ==== CashCalculator Navbar Polishing ==== */
+.cc-navbar{
+  background:
+    linear-gradient(90deg, #18357b, #2e98f3);
+  box-shadow: 0 10px 26px rgba(15,23,42,.12);
+}
+
+/* Brand styling */
+.cc-logo{
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.cc-dot{
+  font-weight: 800;
+  margin-left: .2rem;
+  color: #52e2a8; /* keep a touch of that nice green */
+}
+
+/* Flags */
+.cc-flag{
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Nav link spacing & active state */
+.navbar-dark .navbar-nav .nav-link{
+  padding: .4rem .75rem;
+  border-radius: 10px;
+  transition: background-color .15s ease, color .15s ease, transform .15s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+  background: rgba(255,255,255,.12);
+  transform: translateY(-1px);
+}
+.navbar-dark .navbar-nav .nav-link.active{
+  background: rgba(255,255,255,.18);
+  font-weight: 700;
+}
+
+/* Dropdown items */
+.dropdown-menu{
+  border: 1px solid #e6edf4;
+  border-radius: 12px;
+}
+.dropdown-item{
+  padding: .5rem .75rem;
+  border-radius: 10px;
+}
+.dropdown-item.active,
+.dropdown-item:active{
+  background: rgba(24,53,123,.10);
+  color: #18357b;
+  font-weight: 700;
+}
+
+/* Toggler tweak for nicer hit area */
+.navbar-toggler{
+  border-color: rgba(255,255,255,.35);
+  padding: .35rem .5rem;
+  border-radius: 8px;
+}
+
+/* Make container spacing feel snug on mobile */
+@media (max-width: 575.98px){
+  .navbar-brand{ font-size: 1.05rem; }
+}
+
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -32,7 +253,6 @@ body {
 }
 
 .navbar-cashcalculator {
-    background: #18357b;
     border: 0px;
     border-radius: 0px;
     margin-bottom: 0px;

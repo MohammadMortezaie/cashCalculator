@@ -46,4 +46,57 @@ return [
     'childrens_privacy_description' => 'CashCalculator.net은 13 세 미만의 아이들을 대상으로하지 않습니다. 우리는 의도적으로 13 세 미만의 어린이로부터 개인 식별 정보를 수집하지 않습니다. 13 세 미만의 어린이가 개인 정보를 제공했음을 발견하면 즉시 서버에서 삭제합니다. 귀하가 부모이거나 보호자이며 귀하의 어린이가 개인 정보를 제공한 사실을 알고 계신 경우 적절한 조치를 취하도록 문의 바랍니다.',
     'changes_to_this_privacy_policy_title' => '이 개인 정보 보호 정책의 변경 사항',
     'changes_to_this_privacy_policy_description' => 'CashCalculator.net은 사전 통보 없이 이 개인 정보 보호 정책을 업데이트 할 권리를 보유합니다. 따라서 주기적으로이 페이지를 검토하도록 권장합니다. 새로운 개인 정보 보호 정책을이 페이지에 게시함으로써 변경 사항을 알려 드리겠습니다. 이러한 변경 사항은 여기에 게시된 즉시 효력이 발생합니다.',
+
+  // ==== SEO ====
+
+    // ==== Headings / Hero ====
+    'kicker' => '정확 • 빠름 • 무료',
+    'cta_primary' => '돈 계산기 사용하기',
+    'cta_secondary' => '모든 계산기 보기',
+    'cta_headline' => '숫자를 계산할 준비가 되셨나요?',
+    'cta_sub' => '계산기를 열고 즉시 정확한 결과를 받아보세요.',
+    'open_tool' => '도구 열기',
+    'popular' => '인기',
+    'top_tools' => '인기 있는 도구',
+
+    // ==== Languages ====
+    'lang_note' => '전 세계적으로 9개 언어 지원',
+    'supported_langs' => '지원되는 언어',
+
+    // ==== Calculator Categories ====
+    'MathCalculators' => '수학 및 퍼센트 도구',
+
+    // ==== Individual Calculators ====
+    'percentageCalculator' => '퍼센트 계산기',
+    'percentDiffCalculator' => '퍼센트 차이 계산기',
+    'percentageChangeCalculator' => '퍼센트 변화 계산기',
+    'calculator' => '기본 계산기',
+
+    // ==== Health ====
+    'desc_bmi' => '간단하고 빠르게 체질량지수(BMI)를 계산하세요.',
+
+    // ==== Calculator Descriptions (for cards) ====
+    'desc_moneycalculator' => '무료: 가장 인기 있는 도구로 돈을 빠르고 정확하게 세고 계산하세요.',
+    'desc_budgetplanner' => '이 단계별 도구로 손쉽게 예산을 계획하세요.',
+    'desc_503020' => '50/30/20 예산 규칙을 따라 지출과 저축을 균형 있게 관리하세요.',
+    'desc_retirement' => '은퇴 자금을 추정하고 미래를 계획하세요.',
+    'desc_debtpayoff' => '빚을 갚는 데 걸리는 시간을 확인하고 상환 전략을 탐색하세요.',
+    'desc_investment' => '다양한 성장률로 투자 수익을 계산하세요.',
+    'desc_compound' => '복리 효과가 시간이 지남에 따라 어떻게 자산을 불려주는지 확인하세요.',
+    'desc_percentage' => '몇 초 만에 간단히 퍼센트를 계산하세요.',
+    'desc_percentdiff' => '두 숫자 간의 퍼센트 차이를 확인하세요.',
+    'desc_percentagechange' => '두 값 간의 퍼센트 변화를 계산하세요.',
+    'desc_basiccalc' => '온라인 계산기로 빠르고 간단한 수학 계산을 수행하세요.',
+
+    // ==== FAQ (optional section) ====
+    'faq' => '자주 묻는 질문',
+    'faq_free' => '이 계산기들이 정말 무료인가요?',
+    'faq_free_a' => '네. 모든 도구는 100% 무료이며 회원가입이 필요하지 않습니다.',
+    'faq_accuracy' => '결과는 얼마나 정확한가요?',
+    'faq_accuracy_a' => '공식을 꼼꼼히 검증합니다. 오류를 발견하시면 알려주시면 신속히 수정하겠습니다.',
+    'faq_lang' => '여러 언어를 지원하나요?',
+    'faq_lang_a' => '네 — 영어, 프랑스어, 스페인어, 이탈리아어, 독일어, 포르투갈어(BR), 중국어, 한국어, 러시아어를 지원합니다.',
+
+
+
 ];

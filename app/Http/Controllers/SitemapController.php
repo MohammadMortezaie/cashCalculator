@@ -44,15 +44,26 @@ class SitemapController extends Controller
         $sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
         $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
+        // Use a fixed date for SEO-friendly lastmod
+        $fixedDate = Carbon::createFromDate(2025, 9, 1); // example: first of this month
+
         foreach ($pages as $page) {
             foreach ($locales as $locale) {
                 $url = $locale == 'en' ? url($page) : url("/$locale$page");
                 $url = str_replace('http://', 'https://', $url);
+
                 $sitemap .= '<url>';
                 $sitemap .= '<loc>' . htmlspecialchars($url) . '</loc>';
-                $sitemap .= '<lastmod>' . Carbon::now()->toAtomString() . '</lastmod>';
-                $sitemap .= '<changefreq>monthly</changefreq>';
-                $sitemap .= '<priority>0.8</priority>';
+                $sitemap .= '<lastmod>' . $fixedDate->toAtomString() . '</lastmod>';
+
+                // Use realistic changefreq
+                $changefreq = in_array($page, ['/calculator', '/budget-planner', '/money-calculator']) ? 'weekly' : 'monthly';
+                $sitemap .= '<changefreq>' . $changefreq . '</changefreq>';
+
+                // Priority based on importance
+                $priority = ($page == '/') ? '1.0' : '0.8';
+                $sitemap .= '<priority>' . $priority . '</priority>';
+
                 $sitemap .= '</url>';
             }
         }

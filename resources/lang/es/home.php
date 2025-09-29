@@ -46,4 +46,55 @@ return [
     'childrens_privacy_description' => 'CashCalculator.net no está dirigido a personas menores de 13 años. No recopilamos intencionalmente información personal identificable de niños menores de 13 años. En caso de que descubramos que un niño menor de 13 años nos ha proporcionado información personal, la eliminaremos de inmediato de nuestros servidores. Si eres padre o tutor y eres consciente de que tu hijo nos ha proporcionado información personal, contáctanos para que podamos tomar las medidas necesarias.',
     'changes_to_this_privacy_policy_title' => 'Cambios en esta Política de Privacidad',
     'changes_to_this_privacy_policy_description' => 'CashCalculator.net se reserva el derecho de actualizar esta política de privacidad, con o sin previo aviso. Por lo tanto, te recomendamos que revises esta página periódicamente en busca de modificaciones. Te notificaremos sobre cualquier cambio mediante la publicación de la Política de Privacidad actualizada en esta página. Estos cambios entrarán en vigencia de inmediato después de su publicación aquí.',
+
+      // ==== SEO ====
+
+    // ==== Headings / Hero ====
+    'kicker' => 'Preciso • Rápido • Gratis',
+    'cta_primary' => 'Probar Contador de Dinero',
+    'cta_secondary' => 'Explorar Todos los Calculadores',
+    'cta_headline' => '¿Listo para calcular los números?',
+    'cta_sub' => 'Abra un calculador y obtenga resultados instantáneos y precisos.',
+    'open_tool' => 'Abrir herramienta',
+    'popular' => 'Más popular',
+    'top_tools' => 'Herramientas en tendencia',
+
+    // ==== Languages ====
+    'lang_note' => 'Disponible en 9 idiomas para acceso global',
+    'supported_langs' => 'Idiomas compatibles',
+
+    // ==== Calculator Categories ====
+    'MathCalculators' => 'Herramientas de Matemáticas y Porcentajes',
+
+    // ==== Individual Calculators ====
+    'percentageCalculator' => 'Calculadora de Porcentajes',
+    'percentDiffCalculator' => 'Calculadora de Diferencia en Porcentaje',
+    'percentageChangeCalculator' => 'Calculadora de Cambio en Porcentaje',
+    'calculator' => 'Calculadora básica',
+
+    // ==== Health ====
+    'desc_bmi' => 'Calcule su Índice de Masa Corporal (IMC) de forma fácil y rápida.',
+
+    // ==== Calculator Descriptions (for cards) ====
+    'desc_moneycalculator' => 'Gratis: cuente y calcule dinero de forma rápida y precisa con nuestra herramienta más popular.',
+    'desc_budgetplanner' => 'Planifique su presupuesto fácilmente con esta herramienta paso a paso.',
+    'desc_503020' => 'Siga la regla de presupuesto 50/30/20 para equilibrar gastos y ahorros.',
+    'desc_retirement' => 'Estime sus ahorros para la jubilación y planifique el futuro.',
+    'desc_debtpayoff' => 'Vea cuánto tiempo tomará pagar su deuda y explore estrategias de pago.',
+    'desc_investment' => 'Calcule los rendimientos de sus inversiones con diferentes tasas de crecimiento.',
+    'desc_compound' => 'Vea cómo el interés compuesto hace crecer sus ahorros con el tiempo.',
+    'desc_percentage' => 'Calcule porcentajes fácilmente en segundos.',
+    'desc_percentdiff' => 'Encuentre la diferencia entre dos números en términos porcentuales.',
+    'desc_percentagechange' => 'Calcule el cambio porcentual entre dos valores.',
+    'desc_basiccalc' => 'Realice cálculos rápidos y sencillos con nuestra calculadora en línea.',
+
+    // ==== FAQ (optional section) ====
+    'faq' => 'Preguntas frecuentes',
+    'faq_free' => '¿Estas calculadoras son realmente gratis?',
+    'faq_free_a' => 'Sí. Todas las herramientas son 100 % gratuitas y no requieren registro.',
+    'faq_accuracy' => '¿Qué tan precisos son los resultados?',
+    'faq_accuracy_a' => 'Validamos cuidadosamente las fórmulas. Si encuentra un error, contáctenos y lo solucionaremos rápidamente.',
+    'faq_lang' => '¿Ofrecen soporte en varios idiomas?',
+    'faq_lang_a' => 'Sí — Inglés, Francés, Español, Italiano, Alemán, Portugués (BR), Chino, Coreano y Ruso.',
+
 ];
